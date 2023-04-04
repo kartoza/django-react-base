@@ -117,7 +117,11 @@ if (isServe) {
     }
     conf['devServer'] = {
         hot: true,
-        port: 9000
+        port: 9000,
+        writeToDisk: true,
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+        }
     }
 }
 module.exports = conf;
