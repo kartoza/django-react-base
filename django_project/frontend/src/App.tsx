@@ -3,12 +3,15 @@ import { createRoot } from "react-dom/client";
 import './styles/index.scss';
 import reportWebVitals from './reportWebVitals';
 import Home from "./Home";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 
 const rootElement = document.getElementById('app')!
 const root = createRoot(rootElement);
 root.render(
-      <Home/>
+    <ErrorBoundary>
+        <Home/>
+    </ErrorBoundary>
 );
 
 // If you want to start measuring performance in your app, pass a function

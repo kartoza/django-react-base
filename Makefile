@@ -22,3 +22,10 @@ dev:
 	@echo "------------------------------------------------------------------"
 	@docker-compose ${ARGS} up -d dev worker
 	@docker-compose ${ARGS} up --no-recreate --no-deps -d
+
+serve:
+	@echo
+	@echo "------------------------------------------------------------------"
+	@echo "Execute webpack serve command"
+	@echo "------------------------------------------------------------------"
+	@docker-compose ${ARGS} exec -T dev npm --prefix /home/web/django_project/frontend run serve

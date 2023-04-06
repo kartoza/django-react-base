@@ -5,9 +5,6 @@ import ast
 
 from .project import *  # noqa
 
-import sentry_sdk
-from sentry_sdk.integrations.django import DjangoIntegration
-
 # Comment if you are not running behind proxy
 USE_X_FORWARDED_HOST = True
 
@@ -64,28 +61,28 @@ LOGGING = {
 # -------------------------------------------------- #
 # ----------            SENTRY          ------------ #
 # -------------------------------------------------- #
-# INSTALLED_APPS = INSTALLED_APPS + (
-#     'raven.contrib.django.raven_compat',
-# )
 
-# RAVEN_CONFIG = {
-#     'dsn': os.environ.get('DSN_TRAVIS', ''),
-# }
+SENTRY_DSN = os.environ.get('SENTRY_DSN', '')
 
-CSRF_TRUSTED_ORIGINS = ast.literal_eval(os.environ.get('CSRF_TRUSTED_ORIGINS', '[]'))
-
-SENTRY_DSN = os.environ.get('SENTRY_DSN', None)
 if SENTRY_DSN:
+    import sentry_sdk
+    from sentry_sdk.integrations.django import DjangoIntegration
+
     sentry_sdk.init(
         dsn=SENTRY_DSN,
-        integrations=[DjangoIntegration()],
+        integrations=[
+            DjangoIntegration(),
+        ],
 
         # Set traces_sample_rate to 1.0 to capture 100%
         # of transactions for performance monitoring.
-        # We recommend adjusting this value in production,
+        # We recommend adjusting this value in production.
         traces_sample_rate=1.0,
 
         # If you wish to associate users to errors (assuming you are using
         # django.contrib.auth) you may enable sending PII data.
         send_default_pii=True
     )
+
+
+CSRF_TRUSTED_ORIGINS = ast.literal_eval(os.environ.get('CSRF_TRUSTED_ORIGINS', '[]'))

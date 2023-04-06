@@ -31,7 +31,6 @@ x-common-django:
     - ADMIN_USERNAME=${ADMIN_USERNAME:-admin}
     - ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin}
     - ADMIN_EMAIL=${ADMIN_EMAIL:-admin@example.com}
-    - DSN_TRAVIS=${DSN_TRAVIS:-''}
   volumes:
     - static-data:/home/web/static
     - media-data:/home/web/media
