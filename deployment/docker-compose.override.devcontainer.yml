@@ -1,0 +1,36 @@
+version: '3.9'
+services:
+  db:
+    volumes:
+      - ./volumes/database:/opt/postgres/data
+      - ./volumes/backups:/backups
+
+  dbbackups:
+    volumes:
+      - ./volumes/backups:/backups
+
+  worker:
+    image: kartoza/sanbi_dev
+    build:
+      context: ../
+      dockerfile: deployment/docker/Dockerfile
+      target: vscode
+    volumes:
+      - ../:/home/web/project
+      - ./volumes/static:/home/web/static
+      - ./volumes/media:/home/web/media
+
+  dev:
+    build:
+      context: ../
+      dockerfile: deployment/docker/Dockerfile
+      target: vscode
+    entrypoint: []
+    volumes:
+      - ../:/home/web/project
+      - ./volumes/static:/home/web/static
+      - ./volumes/media:/home/web/media
+    links:
+      - db
+      - worker
+      
