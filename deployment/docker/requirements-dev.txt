@@ -4,6 +4,7 @@ pep8
 pylint
 flake8
 factory_boy
+debugpy
 
 django-devserver
 
