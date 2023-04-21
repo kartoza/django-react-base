@@ -2,20 +2,23 @@ import React from 'react';
 import './styles/App.scss';
 
 function Home() {
+
+  const buttonClicked = () => {
+    throw new Error('error!')
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Edit <code>src/App.tsx</code> and save to
         </p>
-        <a
+        <div
           className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          onClick={buttonClicked}
         >
-          React
-        </a>
+          Error Test
+        </div>
       </header>
     </div>
   );

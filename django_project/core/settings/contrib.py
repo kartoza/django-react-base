@@ -35,7 +35,6 @@ REST_FRAMEWORK = {
     'DEFAULT_VERSIONING_CLASS': (
         'rest_framework.versioning.NamespaceVersioning'
     ),
-    'EXCEPTION_HANDLER': 'georepo.utils.custom_exception_handler'
 }
 
 AUTHENTICATION_BACKENDS = (
@@ -48,3 +47,5 @@ CELERY_RESULT_BACKEND = 'django-db'
 TEMPLATES[0]['OPTIONS']['context_processors'] += [
     'django.template.context_processors.request',
 ]
+
+SENTRY_DSN = os.environ.get('SENTRY_DSN', '')
