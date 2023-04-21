@@ -61,9 +61,6 @@ LOGGING = {
 # -------------------------------------------------- #
 # ----------            SENTRY          ------------ #
 # -------------------------------------------------- #
-
-SENTRY_DSN = os.environ.get('SENTRY_DSN', '')
-
 if SENTRY_DSN is not None and SENTRY_DSN.strip():
     import sentry_sdk
     from sentry_sdk.integrations.django import DjangoIntegration

@@ -21,6 +21,7 @@ services:
       - ./volumes/media:/home/web/media
 
   dev:
+    image: kartoza/sanbi_dev
     build:
       context: ../
       dockerfile: deployment/docker/Dockerfile
@@ -33,4 +34,16 @@ services:
     links:
       - db
       - worker
+  
+  django:
+    image: kartoza/sanbi_dev
+    build:
+      context: ../
+      dockerfile: deployment/docker/Dockerfile
+      target: vscode
+    volumes:
+      - ../django_project:/home/web/django_project
+      - ./volumes/static:/home/web/static
+      - ./volumes/media:/home/web/media
+
       

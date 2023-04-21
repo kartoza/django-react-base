@@ -102,6 +102,7 @@ if (isServe) {
         allowedHosts: 'all',
         compress: true,
     }
+    conf['devtool'] = 'inline-source-map',
     conf['output'] = {
         path: path.resolve(__dirname, "./bundles/frontend"),
         filename: filename + '.js',
