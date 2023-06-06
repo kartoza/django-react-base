@@ -1,0 +1,50 @@
+site_name: Project Name
+site_description: "Project technical and user documentation."
+site_author: "Kartoza"
+docs_dir: ./src
+site_dir: ./site
+repo_name: "Project Name"
+repo_url: "https://github.com/kartoza/<project name>"
+edit_uri: "https://github.com/kartoza/<project name>/blob/main/docs/"
+
+copyright: Kartoza and Contributors
+
+markdown_extensions:
+        - pymdownx.highlight:
+                  anchor_linenums: true
+        - pymdownx.inlinehilite
+        #- mdx_truly_sane_lists
+        - toc:
+                  permalink: true
+                   #slugify: !!python/name:pymdownx.slugs.slugify
+        - pymdownx.snippets:
+                  base_path: .
+        - admonition
+        - tables
+        - pymdownx.details
+        - pymdownx.caret
+        - pymdownx.keys
+        - pymdownx.mark
+        - pymdownx.tilde
+        - pymdownx.superfences:
+                  custom_fences:
+                          - name: mermaid
+                            class: mermaid
+                            format: !!python/name:pymdownx.superfences.fence_code_format
+        - pymdownx.emoji:
+                  emoji_generator: !!python/name:materialx.emoji.to_svg
+                  emoji_index: !!python/name:materialx.emoji.twemoji
+
+nav:
+        - Home:
+                  - Home: index.md
+        - User:
+                  - Kartoza: user/index.md
+        - Admin:
+                  - Admin: admin/index.md
+        - Developer:
+                  - Developer: developer/index.md
+        - DevOps:
+                  - DevOps: devops/index.md
+        - About:
+                  - About: about/index.md
