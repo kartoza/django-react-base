@@ -18,3 +18,7 @@ django_project/.env
 django_project/tmp/
 django_project/frontend/bundles/
 django_project/frontend/stats.json
+
+docs/site/*
+docks/mkdocs.yml
+.direnv
