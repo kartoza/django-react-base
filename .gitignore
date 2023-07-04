@@ -22,3 +22,4 @@ django_project/frontend/stats.json
 docs/site/*
 docks/mkdocs.yml
 .direnv
+docs/mkdocs.yml

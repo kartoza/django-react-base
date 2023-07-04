@@ -38,6 +38,7 @@ markdown_extensions:
 nav:
         - Home:
                   - Home: index.md
+                  - License: license.md
         - User:
                   - Kartoza: user/index.md
         - Admin:
