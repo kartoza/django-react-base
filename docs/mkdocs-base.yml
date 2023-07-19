@@ -44,15 +44,16 @@ nav:
                   - User Reference Manual: user/user-reference-manual.md
                   - API: user/api.md
         - Admin:
+                  - Admin Guide: admin/admin-guide.md
                   - Admin Reference Manual: admin/admin-reference-manual.md
         - Developer:
                   - Tutorial: developer/tutorial.md
                   - Architecture: developer/architecture.md
-                  - Workflows: developer/workflows.md
                   - Documentation: developer/docs.md
                   - Developer Reference Manual: developer/dev-ref-manual.md
                   - Design: developer/design.md
         - DevOps:
-                  - DevOps: devops/index.md
+                  - DevOps Tutorial: devops/tutorial.md
+                  - DevOps Reference Manual: devops/devops-ref-manual.md
         - About:
                   - Index: about/index.md
