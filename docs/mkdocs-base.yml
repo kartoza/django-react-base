@@ -38,14 +38,21 @@ markdown_extensions:
 nav:
         - Home:
                   - Home: index.md
-                  - License: license.md
         - User:
-                  - Kartoza: user/index.md
+                  - Quickstart: user/quickstart.md
+                  - User Guide: user/user-guide.md
+                  - User Reference Manual: user/user-reference-manual.md
+                  - API: user/api.md
         - Admin:
-                  - Admin: admin/index.md
+                  - Admin Reference Manual: admin/admin-reference-manual.md
         - Developer:
-                  - Developer: developer/index.md
+                  - Tutorial: developer/tutorial.md
+                  - Architecture: developer/architecture.md
+                  - Workflows: developer/workflows.md
+                  - Documentation: developer/docs.md
+                  - Developer Reference Manual: developer/dev-ref-manual.md
+                  - Design: developer/design.md
         - DevOps:
                   - DevOps: devops/index.md
         - About:
-                  - About: about/index.md
+                  - Index: about/index.md
