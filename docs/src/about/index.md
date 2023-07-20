@@ -17,7 +17,7 @@
 
 ## Logos
 
-Another fine page by:
+Another fine project by:
 ![Kartoza Logo]()
 
 ![Project Partner Logo]()
