@@ -9,7 +9,7 @@
 
 | Contributor | GitHub Handle |
 | ----------- | ------------- |
-| Example Person | [example GitHub tag]() |
+| Example Person | [NotARobot]() |
 | Hugh Mann | [Pursanne]() |
 
 ## Project Funders/Backers
