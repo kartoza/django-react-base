@@ -3,14 +3,13 @@
 <!-- Replace all of the titles with relevant titles -->
 
 ## Tutorial 1
-<!-- e.g. starting a new project (change per project) -->
-![tut1_new_proj_1](img/tut1_new_proj_1)
-
-## Tutorial 2
-<!-- e.g. loading data (change per project) -->
+<!-- e.g. starting a new project (change title per project and give good name) -->
+[tutorial 1](tutorial1.md)
 
 ## Sample Data
 <!-- Links to sample data used in examples -->
+[link to sample data 1]()
 
 ## Sample Projects
 <!-- Sample projects utilising the product or platform -->
+[link to sample project 1]()

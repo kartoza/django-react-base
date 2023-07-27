@@ -39,22 +39,22 @@ nav:
         - Home:
                   - Home: index.md
         - User:
-                  - Quickstart: user/quickstart.md
-                  - User Guide: user/user-guide.md
-                  - User Reference Manual: user/user-reference-manual.md
-                  - API: user/api.md
+                  - User Documentation: user/quickstart/index.md
+                  - User Guide: user/user-guide/index.md
+                  - User Reference Manual: user/user-reference-manual/index.md
+                  - API: user/api/index.md
         - Admin:
-                  - Admin Guide: admin/admin-guide.md
-                  - Admin Reference Manual: admin/admin-reference-manual.md
+                  - Admin Guide: admin/admin-guide/index.md
+                  - Admin Reference Manual: admin/admin-reference-manual/index.md
         - Developer:
-                  - Tutorial: developer/tutorial.md
-                  - Architecture: developer/architecture.md
-                  - Documentation: developer/docs.md
-                  - Developer Reference Manual: developer/dev-ref-manual.md
-                  - Design: developer/design.md
+                  - Tutorial: developer/tutorial/index.md
+                  - Architecture: developer/architecture/index.md
+                  - Documentation: developer/docs/index.md
+                  - Developer Reference Manual: developer/dev-ref-manual/index.md
+                  - Design: developer/design/index.md
         - DevOps:
-                  - DevOps Tutorial: devops/tutorial.md
-                  - DevOps Reference Manual: devops/devops-ref-manual.md
+                  - DevOps Tutorial: devops/tutorial/index.md
+                  - DevOps Reference Manual: devops/devops-ref-manual/index.md
         - About:
                   - Index: about/index.md
                   - License: about/license.md
