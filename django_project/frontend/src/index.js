@@ -7,7 +7,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 Sentry.init({
-  dsn: "http://f9885e650ee94cbf8988f7caf627a9a0@sentry.kartoza.com/36",
+  dsn: "SENTRY_DSN",
   integrations: [new Integrations.BrowserTracing()],
   tracesSampler: 1.0
 })

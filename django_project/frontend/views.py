@@ -1,6 +1,7 @@
 from django.views.generic import TemplateView, View
 from django.http import HttpResponse
 from django.utils.decorators import method_decorator
+from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
 import json
 import requests
@@ -18,7 +19,7 @@ class HomeView(TemplateView):
 
 @method_decorator(csrf_exempt, name="dispatch")
 class SentryProxyView(View):
-    sentry_key = 'http://f9885e650ee94cbf8988f7caf627a9a0@sentry.kartoza.com/36'
+    sentry_key = settings.SENTRY_DSN
     def post(self, request):
         host = "sentry.io"
         known_project_ids = [36]  # Add your Sentry project IDs here

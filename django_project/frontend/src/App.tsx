@@ -8,7 +8,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 
 
 Sentry.init({
-    dsn: "https://6918ad50e4524688ab87f4e6ef837dc9@o171408.ingest.sentry.io/4504965795479552",
+    dsn: 'SENTRY_DSN',
     tunnel: '/sentry-proxy/',
     tracesSampleRate: 0.5
 })
