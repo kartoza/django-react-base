@@ -10,6 +10,7 @@ edit_uri: "https://github.com/kartoza/<project name>/blob/main/docs/"
 copyright: Kartoza and Contributors
 
 markdown_extensions:
+        - attr_list # lets us resize images see https://github.com/mkdocs/mkdocs/issues/1678#issuecomment-455500757
         - pymdownx.highlight:
                   anchor_linenums: true
         - pymdownx.inlinehilite
@@ -35,26 +36,59 @@ markdown_extensions:
                   emoji_generator: !!python/name:materialx.emoji.to_svg
                   emoji_index: !!python/name:materialx.emoji.twemoji
 
+# Navigation
 nav:
         - Home:
                   - Home: index.md
-        - User:
-                  - User Documentation: user/quickstart/index.md
-                  - User Guide: user/user-guide/index.md
-                  - User Reference Manual: user/user-reference-manual/index.md
-                  - API: user/api/index.md
-        - Admin:
-                  - Admin Guide: admin/admin-guide/index.md
-                  - Admin Reference Manual: admin/admin-reference-manual/index.md
-        - Developer:
-                  - Tutorial: developer/tutorial/index.md
-                  - Architecture: developer/architecture/index.md
-                  - Documentation: developer/docs/index.md
-                  - Developer Reference Manual: developer/dev-ref-manual/index.md
-                  - Design: developer/design/index.md
-        - DevOps:
-                  - DevOps Tutorial: devops/tutorial/index.md
-                  - DevOps Reference Manual: devops/devops-ref-manual/index.md
-        - About:
-                  - Index: about/index.md
+                  - Code of Conduct: about/code-of-conduct.md
                   - License: about/license.md
+                  - Running Instances: about/running-instances.md
+        - User:
+                  - user/index.md
+                  - Quickstart: user/quickstart/index.md
+                  - Guide:
+                          - user/guide/index.md
+                  - Manual :
+                          - user/manual/index.md
+        - Administrators:
+                - administrator/index.md
+                - Guide:
+                        - administrator/guide/index.md
+                - Manual:
+                        - administrator/manual/index.md
+        - Developers:
+                - developer/index.md
+                - Guide:
+                        - developer/guide/index.md
+                        - Architecture: developer/guide/architecture.md
+                        - Prerequisites: developer/guide/prerequisites.md
+                        - Cloning: developer/guide/cloning.md
+                        - IDE Setup: developer/guide/ide-setup.md
+                        - Configuration: developer/guide/configuration.md
+                        - Building: developer/guide/building.md
+                        - Design: developer/guide/design.md
+                        - Road Map: developer/guide/roadmap.md
+                        - Workflows: developer/guide/workflows.md
+                        # Pages to render but exclude from navigation
+                        - "": developer/guide/templates/pull-request-template.md 
+                        - "": developer/guide/templates/commit-message-convention.md
+                - Manual: developer/manual/index.md
+                - Documentation Writing:
+                        - developer/documentation/index.md
+                        - Overview: developer/documentation/overview.md
+                        - Context Help: developer/documentation/context-help.md
+                - API:
+                        - developer/api/index.md
+                        - Reference: developer/api/manual/index.md
+                        - Guide: developer/api/guide/index.md
+                - License: about/license.md
+        - DevOps:
+                  - devops/index.md
+                  - Guide: devops/guide/index.md
+                  - Manual: devops/manual/index.md
+        - About:
+                  - About: about/index.md
+                  - License: about/license.md
+                  - Contributing: about/contributing.md
+                  - Disclaimer: about/disclaimer.md
+
