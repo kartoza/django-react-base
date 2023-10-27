@@ -9,10 +9,12 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/yargs": "^17.0.24",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
     "react-scripts": "5.0.1",
+    "typescript": "^4.9.5",
     "web-vitals": "^2.1.4",
     "webpack": "^5.78.0",
     "webpack-bundle-tracker": "^1.5.0",
@@ -20,7 +22,7 @@
     "webpack-dev-server": "^4.9.0"
   },
   "scripts": {
-    "serve": "webpack serve --mode development --host 0.0.0.0 --port 9000",
+    "serve": "webpack serve --mode development --host 0.0.0.0 --port 9000 --stats-error-details",
     "start": "react-scripts start",
     "build": "webpack --mode production",
     "test": "react-scripts test",
@@ -45,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@playwright/test": "^1.36.2",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.3",
     "sass": "^1.60.0",

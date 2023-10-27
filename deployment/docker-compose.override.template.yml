@@ -37,11 +37,13 @@ services:
       context: ../
       dockerfile: deployment/docker/Dockerfile
       target: dev
-    command: python -m debugpy --listen 0.0.0.0:5678 --wait manage.py runserver 0.0.0.0:8000
     volumes:
       - ../django_project:/home/web/django_project
       - ./volumes/static:/home/web/static
       - ./volumes/media:/home/web/media
+    ports:
+      - "${DEV_PORT:-61200}:8000"
+      - "${SSH_PORT:-61202}:22"
 
   nginx:
     volumes:

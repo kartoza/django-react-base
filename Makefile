@@ -20,8 +20,11 @@ dev:
 	@echo "------------------------------------------------------------------"
 	@echo "Running in dev mode"
 	@echo "------------------------------------------------------------------"
-	@docker-compose ${ARGS} up -d dev worker
-	@docker-compose ${ARGS} up --no-recreate --no-deps -d
+	@if [ ! -f deployment/docker-compose.override.yml ]; then \
+    		cp deployment/docker-compose.override.template.yml deployment/docker-compose.override.yml; \
+    		echo "File docker-compose.override.yml was created from template."; \
+    	fi
+	@docker-compose ${ARGS} up -d db dev worker
 
 serve:
 	@echo
