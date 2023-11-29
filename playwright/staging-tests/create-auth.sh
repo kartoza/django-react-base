@@ -27,7 +27,7 @@ $PLAYWRIGHT \
 	-o tests/deleteme.spec.ts \
 	$BASE_URL
 
-# We are only interested in sawps-auth.json
+# We are only interested in auth.json
 rm tests/deleteme.spec.ts
 
 echo "Auth file creation completed."
