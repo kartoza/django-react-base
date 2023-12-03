@@ -1,13 +1,7 @@
-FROM python:3.10.4-buster AS prod
+FROM python:3.12.0-slim-bookworm AS prod
 
-# Enable postgresql-client-15
-#RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main" | tee /etc/apt/sources.list.d/pgdg.list
-#RUN echo "deb http://deb.debian.org/debian/ stable main contrib non-free" | tee /etc/apt/sources.list.d/debian.list
-#RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
-
-RUN apt-get update -y && apt-get upgrade -y
-
-RUN apt-get install -y --no-install-recommends \
+RUN apt-get update -y && \
+    apt-get install -y --no-install-recommends \
     gcc gettext cron \
     spatialite-bin libsqlite3-mod-spatialite \
     python3-dev python3-gdal python3-psycopg2 python3-ldap \
@@ -17,13 +11,12 @@ RUN apt-get install -y --no-install-recommends \
 # Install pip packages
 ADD deployment/docker/requirements.txt /requirements.txt
 RUN pip3 install --upgrade pip && pip install --upgrade pip
+
 # Fix uwsgi build failure missing cc1
 ARG CPUCOUNT=1
 RUN pip3 install -r /requirements.txt
 
-RUN curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
-RUN bash nodesource_setup.sh
-RUN apt-get install nodejs -y
+RUN apt-get update -y && apt-get install -y nodejs npm
 
 ADD django_project /home/web/django_project
 
@@ -53,7 +46,7 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && apt-get install -y sudo \
     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
-    
+
 # ********************************************************
 # * Anything else you want to do like clean up goes here *
 # ********************************************************

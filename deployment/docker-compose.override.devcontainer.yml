@@ -10,7 +10,7 @@ services:
       - ./volumes/backups:/backups
 
   worker:
-    image: kartoza/sanbi_dev
+    image: kartoza/${COMPOSE_PROJECT_NAME:-django_project}_dev
     build:
       context: ../
       dockerfile: deployment/docker/Dockerfile
@@ -21,7 +21,7 @@ services:
       - ./volumes/media:/home/web/media
 
   dev:
-    image: kartoza/sanbi_dev
+    image: kartoza/${COMPOSE_PROJECT_NAME:-django_project}_dev
     build:
       context: ../
       dockerfile: deployment/docker/Dockerfile
@@ -34,9 +34,8 @@ services:
     links:
       - db
       - worker
-  
+
   django:
-    image: kartoza/sanbi_dev
     build:
       context: ../
       dockerfile: deployment/docker/Dockerfile
@@ -46,4 +45,3 @@ services:
       - ./volumes/static:/home/web/static
       - ./volumes/media:/home/web/media
 
-      

@@ -22,7 +22,7 @@ services:
       - ./volumes/media:/home/web/media
 
   worker:
-    image: kartoza/sanbi_dev
+    image: kartoza/django_react_base_dev
     build:
       context: ../
       dockerfile: deployment/docker/Dockerfile
