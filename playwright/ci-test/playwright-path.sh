@@ -18,34 +18,68 @@ echo ""
  # Are we on macOS?
  # Are we in windows?
 
-HAS_PLAYWRIGHT=$(which playwright | grep -v "which: no" | wc -l)
+HAS_PLAYWRIGHT=$(which playwright 2> /dev/null | grep -v "which: no" | wc -l)
 PLAYWRIGHT="playwright"
 if [ $HAS_PLAYWRIGHT -eq 0 ]; then
-  PLAYWRIGHT="npx playwright"
+	PLAYWRIGHT="npx playwright"
   
-  # check if OS is a deb based distro and uses apt
-  USES_APT=$(which apt | grep -w "apt" | wc -l)
-  if [ $USES_APT -eq 1 ]; then
-    # check if nodejs is installed
-    HAS_NODEJS=$(which node | grep -w "node" | wc -l)
-    # if nodejs is present then
-    if [ $HAS_NODEJS -eq 0 ]; then
-      source nodesource-install.sh
-    fi
-    # check if npm is present
-    HAS_NPM=$(which npm | grep -w "npm" | wc -l)
-    if [ $HAS_NPM -eq 1 ]; then
-      NPM="npm"
-      PLAYWRIGHT_INSTALL=$($NPM ls --depth 1 playwright | grep -w "@playwright/test" | wc -l)
+    	# check if OS is a deb based distro and uses apt
+    	USES_APT=$(which apt 2> /dev/null | grep -w "apt" | wc -l)
+    
+    	if [ $USES_APT -eq 1 ]; then
+		# check if nodejs is installed
+		HAS_NODEJS=$(which node | grep -w "node" | wc -l)
 
-      if [ $PLAYWRIGHT_INSTALL -eq 0 ]; then
-        $NPM install
-        $NPM ci
-        $PLAYWRIGHT install --with-deps chromium
-      fi
-    fi
+		# if nodejs is present then
+    		if [ $HAS_NODEJS -eq 0 ]; then
+			source nodesource-install.sh
+    		fi
 
-  fi
+    		# check if npm is present
+    		HAS_NPM=$(which npm | grep -w "npm" | wc -l)
+
+    		if [ $HAS_NPM -eq 1 ]; then
+			NPM="npm"
+			PLAYWRIGHT_INSTALL=$($NPM ls --depth 1 playwright | grep -w "@playwright/test" | wc -l)
+
+			if [ $PLAYWRIGHT_INSTALL -eq 0 ]; then
+				$NPM install -D @playwright/test@latest
+				$NPM ci
+				$PLAYWRIGHT install --with-deps chromium
+			fi
+
+    		fi
+
+	fi
+
+  	# check if OS is an rpm-based distro
+  	USES_RPM=$(which rpm | grep -w "rpm" | wc -l)
+  	if [ $USES_RPM -eq 1 ]; then
+
+    		# check if nodejs is installed
+    		HAS_NODEJS=$(which node | grep -w "node" | wc -l)
+
+    		# if nodejs is present then
+    		if [ $HAS_NODEJS -eq 0 ]; then
+      			source nodesource-install.sh
+    		fi
+
+    		# check if npm is present
+    		HAS_NPM=$(which npm | grep -w "npm" | wc -l)
+
+    		if [ $HAS_NPM -eq 1 ]; then
+      			NPM="npm"
+			PLAYWRIGHT_INSTALL=$($NPM ls --depth 1 playwright | grep -w "@playwright/test" | wc -l)
+
+      			if [ $PLAYWRIGHT_INSTALL -eq 0 ]; then
+        			$NPM install -D @playwright/test@latest
+        			$NPM ci
+        			$PLAYWRIGHT install
+      			fi
+
+    		fi
+
+	fi
 
 fi
 

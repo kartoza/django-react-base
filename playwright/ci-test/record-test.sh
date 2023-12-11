@@ -16,7 +16,7 @@ then
   echo "npx playwright test tests/mytest.spec.py"
   exit
 else
-  echo "Recording test to tests\$1"
+  echo "Recording test to tests/${1}"
 fi
 
 if [ -w "tests/${1}.spec.ts" ]; then

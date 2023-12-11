@@ -3,19 +3,20 @@
 echo "NodeJS will be installed if not present"
 echo "Sudo password will be required"
 
-# Download and import Nodesource GPG key
-sudo apt-get update
-sudo apt-get install -y ca-certificates curl gnupg
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+USES_APT=$(which apt | grep -w "apt" | wc -l)
+USES_RPM=$(which rpm | grep -w "rpm" | wc -l)
 
-# Create deb repository
-NODE_MAJOR=18
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+if [ $USES_APT -eq 1 ]; then 
+	curl -SLO https://deb.nodesource.com/nsolid_setup_deb.sh
+	chmod 500 nsolid_setup_deb.sh
+	./nsolid_setup_deb.sh 20
+	sudo apt-get install nodejs -y
 
-# Update repository and install
-sudo apt-get update
-sudo apt-get install nodejs -y
+elif [ $USES_RPM -eq 1]; then
+	curl -SLO https://rpm.nodesource.com/nsolid_setup_rpm.sh
+	chmod 500 nsolid_setup_rpm.sh
+	./nsolid_setup_rpm.sh 20
+	sudo yum install nodejs -y --setopt=nodesource-nodejs.module_hotfixes=1
 
 echo "Done"
 echo ""
