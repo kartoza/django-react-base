@@ -27,7 +27,7 @@ Published under AGPL-3. See the [full license](license.md) text.
 
 ## Project funders/backers
 
-This project was conceptualized and initially funded by [FUNDER_1].
+This project was conceptualized and initially funded by [FUNDER_1]().
 
 ## Logos
 
