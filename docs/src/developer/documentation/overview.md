@@ -1,17 +1,17 @@
 ---
-title: PROJECT_TITLE
-summary: PROJECT_SUMMARY
-    - PERSON_1
-    - PERSON_2
-date: DATE
-some_url: PROJECT_GITHUB_URL
-copyright: Copyright 2023, PROJECT_OWNER
-contact: PROJECT_CONTACT
+title: GeoSight-OS Documentation Home 
+summary: GeoSight is UNICEF's geospatial web-based business intelligence platform.
+    - Tim Sutton
+    - Irwan Fathurrahman
+date: 2023-08-03
+some_url: https://github.com/unicef-drp/GeoSight-OS
+copyright: Copyright 2023, Unicef
+contact: geosight-no-reply@unicef.org
 license: This program is free software; you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
 #context_id: 1234
 ---
 
-# Documentation overview
+# Documentation Overview
 
 This section provides an overview of how the documentation system works.
 
@@ -77,9 +77,9 @@ Please follow these conventions when writing your documentation:
 
 ## Contributing to the documentation
 
-:pencil2: Note: The repo name in the images below is blurred out, you should work against the [PROJECT_NAME] repository when following these notes.
+:pencil2: Note: The repo name in the images below is blurred out, you should work against the GeoRepo-OS repository when following these notes.
 
-To start adding to the documentation navigate to the [home page](https://github.com/project_name/repository) of the repository.
+To start adding to the documentation navigate to the [home page](https://github.com/unicef-drp/GeoRepo-OS) of the repository.
 
 Once on the repository home page, 1️⃣ click on Fork
 ![Fork Repository 1](img/fork-repo-1.png)
@@ -121,63 +121,19 @@ Once your pull request is opened you need to wait for it to be merged before you
 
 ## Creating new files
 
-Open the Web Editor by clicking on `.` on your keyboard when you are on your fork of the repository. The screen below should appear until the editor loads.
-
-![Web Editor 1](img/web-editor-1.png)
-
-Navigate to the relative subfolder within the `src` folder to which you would like to add a new file. (e.g. `src` -> `user` -> `manual`). Also ensure that you are in the `Explorer` tab 1️⃣ of the web editor.
-
-![New File 1](img/new-file-1.png)
-
-Once you have selected a subfolder, click on the `New File...` button 1️⃣ to the right of the repository name.
-
-![New File 2](img/new-file-2.png)
-
-Give your file a meaningful name (following the [File naming conventions](#file-naming-conventions) from above) and end the file name with **`.md`** to ensure that the file is saved as a markdown file. Once you have given your file a name, click `Enter` on your keyboard to finish creating it.
-
-![New File 3](img/new-file-3.png)
-
-Once you have created a new file, you can start adding to the documentation using [Markdown](https://www.markdownguide.org/) syntax. You must add a header section to each new file! Please read the [Page metadata](#page-metadata) section below regarding adding the standard header to new files.
-
-![New File 4](img/new-file-4.png)
-
-If you need to add images to your documentation, add them to the relative `img` subfolders following the naming conventions set out in the `naming-convention.README` within the `img` subfolders (e.g. images for the *User Guide* would be added to the `user/guide/img/` subfolder 1️⃣). Adding images is explained further in the [Uploading images / media](#uploading-images-media) section further down the page.
-
-![Web Editor 5](img/web-editor-5.png)
-> **Hint:** *You can click on the `naming-convention.README` file to view it and, in turn, read the image naming conventions. Just remember to switch back to the document that you are working on.*
-
-When you have completed making additions to (or editing) the documentation, click on the source control tab 1️⃣, then click on the `plus` symbol 2️⃣ next to the changes you are finished with to stage them, add a commit message 3️⃣️ that is associated with the work you have done, and the click on `Commit & Push` 4️⃣.
-
-![Web Editor 6](img/web-editor-6.png)
-
-Once you have committed your changes, Click on the burger menu 1️⃣ and then click on `Go To Repository` 2️⃣.
-
-![Web Editor 7](img/web-editor-7.png)
-
-Your fork of the repository will be opened in a new tab within your browser, navigate to that tab (your browser might block pop ups, so you might need to manually open the pop up to get back to your fork of the repository). Once there, ensure you are on the `main` branch 1️⃣ (you should see how many commits ahead of the upstream branch you are), then click on `Contribute` 2️⃣ -> `Open pull request` 3️⃣️.
-
-![Pull Request 1](img/pull-request-1.png)
-
-On the next screen, give your pull request a meaningful title 1️⃣, give additional details regarding changes made in the larger text box 2️⃣, then click on `Create pull request` 3️⃣️. Also ensure you are creating a pull request to the upstream `main` branch from your `main` branch.
-
-![Pull Request 2](img/pull-request-2.png)
-
-Once your pull request is opened you need to wait for it to be merged before you can open a new one.
-
 ### Page metadata
-
 Whenever you create a new file, you should add the standard header to the top of the file:
 
 ```
 ---
-title: PROJECT_TITLE
-summary: PROJECT_SUMMARY
-    - PERSON_1
-    - PERSON_2
-date: DATE
-some_url: PROJECT_GITHUB_URL
-copyright: Copyright 2023, PROJECT_OWNER
-contact: PROJECT_CONTACT
+title: GeoRepo-OS Documentation 
+summary: GeoRepo is a UNICEF's geospatial web-based data storage and administrative boundary harmonization platform.
+    - Tim Sutton
+    - Dimas Tri Ciputra
+    - Danang Tri Massandy
+date: 2023-08-03
+copyright: Copyright 2023, Unicef
+contact: georepo-no-reply@unicef.org
 license: This program is free software; you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
 #context_id: 1234
 ---
@@ -191,54 +147,16 @@ The context_id is used to create a unique permalink to this document, and is opt
 
 All pages need to be added to the 'Nav' section of the `mkdocs-base.yml` file. This will ensure that it is available in the menus and that mkdocs renders without errors. For example, if you wish to add a new page to the User Guide area, in Nav you would add a line like this:
 
-`- Navigating the map: user/guide/map-navigation.md`
 
-Sometimes you may not wish to have the new page displayed in the menu system (this can be useful when, for example, it is accessed via a link in another page). In these cases, leave the menu entry part blank e.g.
+`- "Navigating the map": users/guide/map-navigation.md`
 
-`- "": user/guide/map-navigation.md`
+Sometimes you may not wish to have the new page displayed in the menu system (this can be useful when, for example, it is accessed via a link in another page. In these cases, leave the menu entry part blank e.g.
+
+`- "": users/guide/map-navigation.md`
+
 
 Mkdocs will still generate the page but it will not be added to the menu.
 
-#### Editing the 'nav' section
-
-Once you have created a new file (e.g. `user/manual/example-file.md` 1️⃣), you will need to add it to the site navigation.
-
-![Edit navigation 1](img/edit-navigation-1.png)
-
-To edit the site navigation, click on `docs/mkdocs-base.yml` 1️⃣.
-
-![Edit navigation 2](img/edit-navigation-2.png)
-
-In the `mkdocs-base.yml`, scroll down to the `nav` section and add the file path to the relevant section. E.g. `user/manual/example-file.md` would be added to Users -> Manual as `- Example file: user/manual/example-file.md` 1️⃣. Ensure your added page has the correction indentation in the `nav` section, otherwise the site will not build.
-
-![Edit navigation 3](img/edit-navigation-3.png)
-
-If you have added a page but do not want it to show up in the site navigation, then instead of a page name just put `""`. E.g. `- "": user/manual/example-file.md` 1️⃣.
-
-![Edit navigation 4](img/edit-navigation-4.png)
-
-## Uploading images / media
-
-**Note:** *If you wish to upload a gif, or a small video, you can follow the same steps as below (GitHub does limit the upload size to 10 MB).*
-
-All folders and subfolders should contain an `img` subfolder (e.g. `user/guide/img/`) containing a `naming-convention.README`.
-If you add a new folder, then you should add a new `img` subfolder and copy a `naming-convention.README` from another existing `img` subfolder into your newly created folder.
-
-![Uploading Images 1](img/upload-img-1.png)
-
-To upload an image, right-click on the relative `img` subfolder and select `upload` from the menu that appears.
-
-![Uploading Images 2](img/upload-img-2.png)
-
-Select an image from your computer, using the file explore that opens, and then click on the `Open` Button 1️⃣ (The attached screenshot is from a Linux machine however, Windows also has an open button).
-
-![Uploading Images 3](img/upload-img-3.png)
-
-If your image does not follow the naming conventions, right-click on the image, click on `Rename...` on the menu that appears, and then give your image an appropriate name.
-
-![Uploading Images 4](img/upload-img-4.png)
-
-Useful tools for capturing images and screencasts are: Peek (For screencasts), Flameshot (For images), Shutter (For images), and Lightshot (For images)
 
 ## Technical notes
 
@@ -250,16 +168,16 @@ If you want to work with the documentation locally (i.e. directly on your PC), y
 2. Install pip
 3. Install virtualenv (`pip install virtualenv`)
 4. Make the docs folder your working directory (`cd docs`)
-5. Create the virtual env in the docs folder (`python -m venv env`)
-6. Activate the venv (`source env/bin/activate`)
-7. Install the python modules listed in docs/requirements.txt (`pip install -r requirements.txt`)
-8. If you are on Linux or macOS, open the docs directory in a shell and run ``build-docs-html.sh``
-9. In the docs directory, run ``mkdocs serve``
-10. Open your web browser at https://localhost:8000 to view the rendered docs.
+4. Create the virtual env in the docs folder (`python -m venv env`)
+5. Activate the venv (`source env/bin/activate`)
+5. Install the python modules listed in docs/requirements.txt (`pip install -r requirements.txt`)
+6. If you are on Linux or macOS, open the docs directory in a shell and run ``build-docs-html.sh``
+7. In the docs directory, run ``mkdocs serve``
+8. Open your web browser at https://localhost:8000 to view the rendered docs.
 
 Note that ``mkdocs serve`` will dynamically re-render the docs any time you make a change. The process above is illustrated in the diagram below:
 
-![html workflow](img/html-workflow.png)
+![](img/html-workflow.png)
 
 ### Hooks
 
@@ -268,7 +186,7 @@ We implement two hooks (plugins for mkdocs that are invoked during the docs rend
 * **uuid_redirects_hook.py** - this is used to handle page redirects from a uuid - see below for more details
 * **python_manual_hook.py** - this is used to auto-generate the reference guide for the python modules, classes and functions that make up the code base for this project.
 
-### Permalinks for user and administration documents
+### Permalinks for user and admin docs
 
 If you are a developer, you should be aware of the workflow for creating user and administrator documentation for each page you create.
 
@@ -281,11 +199,12 @@ Every page should have a help link on it that leads to the appropriate manual pa
 
 Whenever the user visits the page using the UUID URL, they will be redirected to the correct page e.g. ``https://siteurl/login/``. This system protects us from file renaming and reorganising on the site, and ensures that the help link will always remain valid.
 
+
 ### Generating PDFS
 
-To generate PDFS, `cd` into `PROJECT_NAME/docs` and then run `./build-docs-pdf` in a local terminal
+To generate PDFS, `cd` into `GEOREPO-OS/docs` and then run the `build-docs-pdf` in a local terminal
 
-### Generating static site locally
+### Generating Static Site
 
-To generate HTML, `cd` into `PROJECT_NAME/docs` and then run `./build-docs-html` in a local terminal.
+To generate HTML, `cd` into `GEOREPO-OS/docs` and then run the `build-docs-html` in a local terminal.
 You can then run `mkdocs serve` to generate the static site on your local host, if there is a port conflict you can specify the port using the `-a` flag e.g `mkdocs serve -a 127.0.0.1:8001`.

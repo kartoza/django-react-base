@@ -1,17 +1,17 @@
 ---
-title: PROJECT_TITLE
-summary: PROJECT_SUMMARY
-    - PERSON_1
-    - PERSON_2
-date: DATE
-some_url: PROJECT_GITHUB_URL
-copyright: Copyright 2023, PROJECT_OWNER
-contact: PROJECT_CONTACT
+title: GeoSight-OS Documentation Context Help
+summary: GeoSight is UNICEF's geospatial web-based business intelligence platform.
+    - Tim Sutton
+    - Irwan Fathurrahman
+date: 2023-08-03
+some_url: https://github.com/unicef-drp/GeoSight-OS
+copyright: Copyright 2023, Unicef
+contact: geosight-no-reply@unicef.org
 license: This program is free software; you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
 #context_id: 1234
 ---
 
-# Context help
+# Context Help
 
 This section describes how the context help system works.
 
@@ -19,21 +19,21 @@ This section describes how the context help system works.
 
 The context help system provides an integration between the web application and the documentation.
 
-![context help 1](img/context-help-1.png)
+![](img/context-help-1.png)
 
 The following concepts are used:
 
 - **Site:** This is the area for globally setting options relating to the context help system.
-- **Blocks:** These are small components displayed as blocks 1️⃣ in the context help panel. Each block links to a section in the help documentation. ![context help 2](img/context-help-2.png)
-- **Pages:** These are context help panels that are each linked to a particular URL in the application. ![context help 3](img/context-help-3.png)
+- **Blocks:** These are small components displayed as blocks 1️⃣ in the context help panel. Each block links to a section in the help documentation. ![](img/context-help-2.png)
+- **Pages:** These are context help panels that are each linked to a particular URL in the application. ![](img/context-help-3.png)
 - **Page Blocks:** These are links between pages and their constituent blocks. Each page can have many blocks and each block can be used in many pages.
 
 ## Triggering context help
 
 There are three ways to trigger context help:
 
-1. From the top nav bar 1️⃣ ![context help 4](img/context-help-4.png)
-2. From the side panel 1️⃣ ![context help 5](img/context-help-5.png)
+1. From the top nav bar 1️⃣ ![image.png](img/context-help-4.png)
+2. From the side panel 1️⃣ ![image.png](img/context-help-5.png)
 3. Next to widgets (not implemented yet)
 
 ## Managing context help
@@ -125,3 +125,7 @@ Generally we will not directly use the PageBlocks management area - use the Page
 The system for context help has been designed in a generic way. That means that you can use any web site where you can reference content with page links and anchors.
 
 ⛔️ One word of caution. Do not use a web site as your documentation source if you do not control that site. The content from the help site is pulled directly into your application, which could put you in a compromising position if the content is not 'on message' for your organisation.
+
+
+
+
