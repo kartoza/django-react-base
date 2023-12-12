@@ -28,7 +28,7 @@ Strapline <!-- replace with one line product description e.g. "Welcome to PROJEC
 
 A **project** (dashboard) is the most important feature of PROJECT_NAME. Projects
 combine different elements (Reference datasets, indicators, and context layers)
-and enable data visualization/analysis for all end users. 
+and enable data visualization/analysis for all end users.
 
 **Context layers** are geospatial layers used to contextualise the information
 presented in a project.
@@ -42,11 +42,11 @@ analysis on country/regional levels and the indicator data.
 ### Disclaimer
 
 <div class="admonition warning">
-The software provided by this project is provided 'as is'. All information provided 
+The software provided by this project is provided 'as is'. All information provided
 within the platform should be independently verified before using as the basis for
 action. The contributors and developers of this platform take no responsibility
-for any loss of revenue, life, physical harm or any other adverse outcome that may 
-occur as a result of the use of this platform. 
+for any loss of revenue, life, physical harm or any other adverse outcome that may
+occur as a result of the use of this platform.
 </div>
 
 ### Purpose
