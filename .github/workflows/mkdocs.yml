@@ -17,7 +17,7 @@ jobs:
         run: ./create-mkdocs-html-config.sh        
 
       - name: Deploy docs
-        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        uses: timlinux/mkdocs-deploy-gh-pages@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CONFIG_FILE: /docs/mkdocs.yml
