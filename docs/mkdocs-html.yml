@@ -65,7 +65,6 @@ extra_javascript:
 # Needed for the hooks below to work
 plugins:
   - search
-  - git-revision-date-localized
   - mkdocs-video
   - mkdocstrings:
       handlers:
