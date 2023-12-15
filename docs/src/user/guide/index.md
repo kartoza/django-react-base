@@ -1,15 +1,16 @@
-# User Guide
+---
+title: PROJECT_TITLE
+summary: PROJECT_SUMMARY
+    - PERSON_1
+    - PERSON_2
+date: DATE
+some_url: PROJECT_GITHUB_URL
+copyright: Copyright 2023, PROJECT_OWNER
+contact: PROJECT_CONTACT
+license: This program is free software; you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
+#context_id: 1234
+---
+
+# User guide
 <!-- Narrative Instructions on how to use the product/platform -->
 <!-- Replace all of the titles with relevant titles -->
-
-## Tutorial 1
-<!-- e.g. starting a new project (change title per project and give good name) -->
-[link to tutorial 1](tutorial1.md)
-
-## Sample Data
-<!-- Links to sample data used in examples -->
-[link to sample data 1]()
-
-## Sample Projects
-<!-- Sample projects utilising the product or platform -->
-[link to sample project 1]()
