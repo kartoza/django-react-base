@@ -7,11 +7,11 @@ import Home from "./Home";
 import ErrorBoundary from "./components/ErrorBoundary";
 
 
-Sentry.init({
-    dsn: 'SENTRY_DSN',
-    tunnel: '/sentry-proxy/',
-    tracesSampleRate: 0.5
-})
+// Sentry.init({
+//     dsn: 'SENTRY_DSN',
+//     tunnel: '/sentry-proxy/',
+//     tracesSampleRate: 0.5
+// })
 
 const rootElement = document.getElementById('app')!
 const root = createRoot(rootElement);
