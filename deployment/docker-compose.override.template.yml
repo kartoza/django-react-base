@@ -37,6 +37,7 @@ services:
       context: ../
       dockerfile: deployment/docker/Dockerfile
       target: dev
+    image: kartoza/${COMPOSE_PROJECT_NAME:-django_project}_dev
     command: python -m debugpy --listen 0.0.0.0:5678 --wait manage.py runserver 0.0.0.0:8000
     volumes:
       - ../django_project:/home/web/django_project
