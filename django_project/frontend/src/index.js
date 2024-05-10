@@ -2,12 +2,14 @@ import * as Sentry from "@sentry/react";
 import { Integrations } from "@sentry/react";
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import './index.css';
+
 Sentry.init({
-  dsn: "SENTRY_DSN",
+  dsn: window.sentryDsn,
   integrations: [new Integrations.BrowserTracing()],
   tracesSampler: 1.0
 })

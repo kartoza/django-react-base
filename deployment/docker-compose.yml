@@ -11,7 +11,7 @@ volumes:
 
 x-common-django:
   &default-common-django
-  image: kartoza/${COMPOSE_PROJECT_NAME:-django_project}:${DJANGO_TAG:-1.0.0}
+  image: kartoza/${COMPOSE_PROJECT_NAME:-django_project}:${DJANGO_TAG:-0.0.1}
   environment:
     # editable in .env
     - DATABASE_NAME=${DATABASE_NAME:-django}

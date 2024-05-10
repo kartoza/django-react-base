@@ -88,9 +88,9 @@ if _load_initial_fixtures:
     call_command('load_fixtures')
 
 #########################################################
-# 4. Collecting static files
+# 5. Collecting static files
 #########################################################
 
 print("-----------------------------------------------------")
-print("4. Collecting static files")
+print("5. Collecting static files")
 call_command('collectstatic', '--noinput', verbosity=0)
