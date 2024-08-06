@@ -5,7 +5,7 @@ services:
       - ./volumes/database:/opt/postgres/data
       - ./volumes/backups:/backups
     ports:
-      - "${DB_PORT:-6432}:5432"
+      - "${DATABASE_PORT:-6432}:5432"
 
   dbbackups:
     volumes:
@@ -22,7 +22,7 @@ services:
       - ./volumes/media:/home/web/media
 
   worker:
-    image: kartoza/django_react_base_dev
+    image: kartoza/${COMPOSE_PROJECT_NAME:-django_project}_dev
     build:
       context: ../
       dockerfile: deployment/docker/Dockerfile
@@ -37,6 +37,7 @@ services:
       context: ../
       dockerfile: deployment/docker/Dockerfile
       target: dev
+    image: kartoza/${COMPOSE_PROJECT_NAME:-django_project}_dev
     command: python -m debugpy --listen 0.0.0.0:5678 --wait manage.py runserver 0.0.0.0:8000
     volumes:
       - ../django_project:/home/web/django_project
