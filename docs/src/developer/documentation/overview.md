@@ -199,10 +199,103 @@ Every page should have a help link on it that leads to the appropriate manual pa
 
 Whenever the user visits the page using the UUID URL, they will be redirected to the correct page e.g. ``https://siteurl/login/``. This system protects us from file renaming and reorganising on the site, and ensures that the help link will always remain valid.
 
-
 ### Generating PDFS
 
-To generate PDFS, `cd` into `GEOREPO-OS/docs` and then run the `build-docs-pdf` in a local terminal
+To generate PDFS, `cd` into `project_base_repo/docs` and then run the `build-docs-pdf` in a local terminal,
+
+#### Modify PDFS Styling
+
+To customise the styling of the PDFs, modify the `styles.scss` file located in the `docs/templates` directory.
+
+This is how it looks.
+
+![Styles File 1](./img/styles-scss-1.png)
+
+for example:
+
+* We want to change the alignment of the headings from right to left.
+
+![PDF](./img/styles-scss-2.png)
+
+* To change the heading alignment we have to change the `text-align: left`.
+
+![Styles File 2](./img/styles-scss-3.png)
+
+* This is the PDF after changing the alignment
+
+![PDF](./img/styles-scss-4.png)
+
+#### Modify Cover Page of PDFS
+
+To customise the cover page of the PDFs, modify the `cover.html` file located in the `docs/templates` directory.
+
+* As you can see in the below image the title of the pdf is `The Kartoza Handbook`.
+
+![PDF](./img/cover-page-1.png)
+
+* Now we want it to be `Kartoza Documentation`, to do this we have to change the title in the `cover.html` file.
+
+![Cover Page](./img/cover-page-2.png)
+
+* This is the cover page after changing the title.
+
+![PDF](./img/cover-page-3.png)
+
+#### Modify Document Title of PDFS
+
+To change the document title of the pdfs, modify the `variable.scss` file located in the `docs/templates` directory.
+
+* As you can see in the below image the document title is `The Kartoza Handbook`.
+
+![PDF](./img/document-title-1.png)
+
+* Now we want it to be `Kartoza Documentation`, to do this we have to change the document title in the `variables.scss` file.
+
+![Variable File](./img/document-title-2.png)
+
+* This is the document title after changing the title.
+
+![PDF](./img/document-title-3.png)
+
+### Modify the Navigation Bar
+
+To customise the content of the navigation bar of the home page of the documentation, you have to modify the `mkdocs-base.yml` file.
+
+For example:
+
+* As you can see in the below image there is a name of the project `Project Name`.
+
+![Home Page](./img/nav-1.png)
+
+* Now we want to change it to `Kartoza Documentation`, to do this we have to change the site name in the `mkdocs-base.yml` file.
+
+![Mkdocs Base](./img/nav-2.png)
+
+* This is the navigation bar after changing the name.
+
+![Home Page](./img/nav-3.png)
+
+>Note: It is must to run `build-docs-html.yml` after making any changes to the `mkdocs-base.yml` file.
+
+### Modify the UI of the Navigation Bar
+
+To customise the `UI` of the navigation bar of the home page of the documentation, you have to modify the `mkdocs-html.yml` file.
+
+For example:
+
+* As you can see in the below image the color of the navigation bar is blue.
+
+![Home Page](./img/nav-4.png)
+
+* Now we want it to be green, to do so we have to change the color in the `mkdocs-html.yml` file.
+
+![Mkdocs Html](./img/nav-5.png)
+
+* This is the navigation bar after changing the color.
+
+![Home Page](./img/nav-6.png)
+
+>Note: It is must to run `build-docs-html.yml` after making any changes to the `mkdocs-html.yml` file.
 
 ### Generating Static Site
 
