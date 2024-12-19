@@ -211,7 +211,7 @@ This is how it looks.
 
 ![Styles File 1](./img/styles-scss-1.png)
 
-for example:
+For example:
 
 * We want to change the alignment of the headings from right to left.
 
@@ -275,7 +275,7 @@ For example:
 
 ![Home Page](./img/nav-3.png)
 
->Note: It is must to run `build-docs-html.yml` after making any changes to the `mkdocs-base.yml` file.
+>Note: It is a must to run `build-docs-html.yml` after making any changes to the `mkdocs-base.yml` file.
 
 ### Modify the UI of the Navigation Bar
 
@@ -295,7 +295,7 @@ For example:
 
 ![Home Page](./img/nav-6.png)
 
->Note: It is must to run `build-docs-html.yml` after making any changes to the `mkdocs-html.yml` file.
+>Note: It is a must to run `build-docs-html.yml` after making any changes to the `mkdocs-html.yml` file.
 
 ### Generating Static Site
 
