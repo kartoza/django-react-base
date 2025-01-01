@@ -1,17 +1,18 @@
 import * as Sentry from "@sentry/react";
 import React from 'react';
 import { createRoot } from "react-dom/client";
-import './styles/index.scss';
-import reportWebVitals from './reportWebVitals';
+
 import Home from "./Home";
+import reportWebVitals from './reportWebVitals';
 import ErrorBoundary from "./components/ErrorBoundary";
 
+import './styles/index.scss';
 
-// Sentry.init({
-//     dsn: 'SENTRY_DSN',
-//     tunnel: '/sentry-proxy/',
-//     tracesSampleRate: 0.5
-// })
+Sentry.init({
+    dsn: (window as any).sentryDsn,
+    tunnel: '/sentry-proxy/',
+    tracesSampleRate: 0.5
+})
 
 const rootElement = document.getElementById('app')!
 const root = createRoot(rootElement);

@@ -29,3 +29,10 @@ serve:
 	@echo "Execute webpack serve command"
 	@echo "------------------------------------------------------------------"
 	@docker-compose ${ARGS} exec -T dev npm --prefix /home/web/django_project/frontend run serve
+
+down:
+	@echo
+	@echo "------------------------------------------------------------------"
+	@echo "Removing production instance!!! "
+	@echo "------------------------------------------------------------------"
+	@docker-compose down
