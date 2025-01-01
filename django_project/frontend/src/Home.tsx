@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles/App.scss';
+import Navbar from "./components/NavBar";
 
 function Home() {
 
@@ -9,9 +10,10 @@ function Home() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <Navbar />
+      <div className="AppContent">
         <p>
-          Edit <code>src/App.tsx</code> and save to
+          Welcome to Kartoza Django React Base
         </p>
         <div
           className="App-link"
@@ -19,7 +21,7 @@ function Home() {
         >
           Error Test
         </div>
-      </header>
+      </div>
     </div>
   );
 }
