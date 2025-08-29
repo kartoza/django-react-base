@@ -11,8 +11,10 @@ django_project/.pycharm_helpers/
 celerybeat-schedule*
 node_modules/
 webpack-stats.*
+package-lock.json
 secret.py
 coverage.xml
+docker-compose.template.yml
 
 django_project/.env
 django_project/tmp/

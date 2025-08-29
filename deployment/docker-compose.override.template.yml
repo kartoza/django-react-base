@@ -4,8 +4,6 @@ services:
     volumes:
       - ./volumes/database:/opt/postgres/data
       - ./volumes/backups:/backups
-    ports:
-      - "${DATABASE_PORT:-6432}:5432"
 
   dbbackups:
     volumes:
@@ -32,17 +30,62 @@ services:
       - ./volumes/static:/home/web/static
       - ./volumes/media:/home/web/media
 
+  celery_beat:
+    image: kartoza/${COMPOSE_PROJECT_NAME:-django_project}_dev
+    build:
+      context: ../
+      dockerfile: deployment/docker/Dockerfile
+      target: dev
+    volumes:
+      - ../django_project:/home/web/django_project
+      - ./volumes/static:/home/web/static
+      - ./volumes/media:/home/web/media
+
+  webpack:
+    build:
+      context: ../
+      dockerfile: deployment/docker/Dockerfile
+      target: dev
+    image: kartoza/${COMPOSE_PROJECT_NAME:-django_project}_dev
+    volumes:
+      - ../django_project:/home/web/django_project
+      - ./volumes/static:/home/web/static
+      - ./volumes/media:/home/web/media
+    working_dir: /home/web/django_project/frontend
+    command: sh -c "npm install --verbose && npm run dev"
+    entrypoint: []
+    ports:
+      - "9000:9000"
+    healthcheck:
+      test: [ "CMD", "curl", "http://localhost:9000" ]
+      interval: 5s
+      timeout: 2s
+      retries: 200
+      start_period: 5s
+
   dev:
     build:
       context: ../
       dockerfile: deployment/docker/Dockerfile
       target: dev
     image: kartoza/${COMPOSE_PROJECT_NAME:-django_project}_dev
-    command: python -m debugpy --listen 0.0.0.0:5678 --wait manage.py runserver 0.0.0.0:8000
+    env_file:
+      - .env
+    entrypoint: [ "/home/web/django_project/entrypoint.dev.sh" ]
     volumes:
       - ../django_project:/home/web/django_project
       - ./volumes/static:/home/web/static
       - ./volumes/media:/home/web/media
+    ports:
+      - "${HTTP_PORT:-8888}:80"
+    links:
+      - db
+      - redis
+      - worker
+      - webpack
+    depends_on:
+      webpack:
+        condition: service_healthy
 
   nginx:
     volumes:
