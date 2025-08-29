@@ -3,27 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@chakra-ui/icons": "^2.2.4",
+    "@chakra-ui/react": "^3.26.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^6.1.4",
-    "@sentry/browser": "^8.34.0",
-    "@sentry/react": "^8.34.0",
-    "@sentry/tracing": "^8.34.0",
-    "@testing-library/jest-dom": "^6.5.0",
-    "@testing-library/react": "^16.1.0",
-    "@testing-library/user-event": "^14.5.2",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "@sentry/browser": "^10.7.0",
+    "@sentry/react": "^10.7.0",
+    "@sentry/tracing": "^7.120.4",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "react-redux": "^9.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^4.2.4",
-    "webpack": "^5.96.1",
-    "webpack-bundle-tracker": "^1.11.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.1.0"
+    "web-vitals": "^5.1.0",
+    "webpack": "^5.101.3",
+    "webpack-bundle-tracker": "^3.2.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
   },
   "scripts": {
-    "serve": "webpack serve --mode development --host 0.0.0.0 --port 9000",
+    "serve": "webpack serve --mode development",
     "build": "webpack --mode production"
   },
   "eslintConfig": {
@@ -45,9 +46,14 @@
     ]
   },
   "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.6.1",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^7.1.2",
-    "sass": "^1.79.4",
-    "ts-loader": "^9.5.1"
+    "mini-css-extract-plugin": "^2.9.4",
+    "sass": "^1.91.0",
+    "sass-loader": "^16.0.5",
+    "ts-loader": "^9.5.4"
   }
 }

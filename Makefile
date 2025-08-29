@@ -21,7 +21,6 @@ dev:
 	@echo "Running in dev mode"
 	@echo "------------------------------------------------------------------"
 	@docker compose ${ARGS} up -d dev worker
-	@docker compose ${ARGS} up --no-recreate --no-deps -d
 
 down:
 	@echo
@@ -29,3 +28,11 @@ down:
 	@echo "Removing production instance!!! "
 	@echo "------------------------------------------------------------------"
 	@docker compose down
+
+flake:
+	@echo
+	@echo "------------------------------------------------------------------"
+	@echo "Running flake8"
+	@echo "------------------------------------------------------------------"
+	@pip install flake8 flake8-docstrings pydoclint[flake8]
+	@flake8

@@ -15,6 +15,7 @@ package-lock.json
 secret.py
 coverage.xml
 docker-compose.template.yml
+.vscode-profile
 
 django_project/.env
 django_project/tmp/

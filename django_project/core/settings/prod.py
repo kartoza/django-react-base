@@ -81,5 +81,6 @@ if SENTRY_DSN is not None and SENTRY_DSN.strip():
         send_default_pii=True
     )
 
-
-CSRF_TRUSTED_ORIGINS = ast.literal_eval(os.environ.get('CSRF_TRUSTED_ORIGINS', '[]'))
+CSRF_TRUSTED_ORIGINS = ast.literal_eval(
+    os.environ.get('CSRF_TRUSTED_ORIGINS', '[]')
+)

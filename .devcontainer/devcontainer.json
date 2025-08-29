@@ -1,29 +1,32 @@
 {
     "name": "Django Docker Environment",
-    "remoteUser": "vscode",
-    "postCreateCommand": "git config --global --add safe.directory /home/web/project",
+    "remoteUser": "root",
     "dockerComposeFile": [
-      "../deployment/docker-compose.yml",
-      "../deployment/docker-compose.override.vscode.yml"
+        "../deployment/docker-compose.yml",
+        "../deployment/docker-compose.override.yml",
+        "../deployment/docker-compose.override.vscode.yml",
     ],
     "service": "dev",
-    "runServices": ["db", "redis", "worker", "dev"],
+    "runServices": [
+        "dev"
+    ],
     "workspaceFolder": "/home/web/project",
     "runArgs": [
-      "--env-file",
-      "../deployment/.env"
+        "--env-file",
+        "../deployment/.env"
     ],
-    "portsAttributes": {
-      "9000": {
-        "label": "Frontend",
-        "onAutoForward": "notify"
-      }
-    },
-    "forwardPorts": [8000, 9000],
+    "forwardPorts": [
+        8000
+    ],
     "shutdownAction": "stopCompose",
     "customizations": {
       "vscode": {
-        "extensions": ["ms-python.python", "ms-azuretools.vscode-docker", "njpwerner.autodocstring"],
+        "extensions": [
+          "ms-python.python",
+          "ms-azuretools.vscode-docker",
+          "ms-python.flake8",
+          "njpwerner.autodocstring"
+        ],
         "settings": {
           "terminal.integrated.shell.linux": "/bin/bash",
           "python.pythonPath": "/usr/local/bin/python",
@@ -32,4 +35,4 @@
         }
       }
     }
-  }
+}

@@ -40,7 +40,7 @@ services:
     environment:
       # take care to let the project name below match that
       # declared in the top of the makefile
-      - DUMPPREFIX=PG_GeoSight
+      - DUMPPREFIX=PG_Django
       # These are all defaults anyway, but setting explicitly in
       # case we ever want to ever use different credentials
       - POSTGRES_USER=${DATABASE_USERNAME:-docker}
@@ -73,7 +73,6 @@ services:
 
   celery_beat:
     <<: *default-common-django
-    container_name: "geosight_celery_beat"
     entrypoint: [ ]
     command: 'celery -A core beat --loglevel=info --scheduler django_celery_beat.schedulers:DatabaseScheduler'
     links:
