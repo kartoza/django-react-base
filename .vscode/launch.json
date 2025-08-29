@@ -32,6 +32,17 @@
             "type": "node-terminal",
             "cwd": "${workspaceFolder}/django_project/frontend",
         },
+        {
+          "name": "Documentation: Build",
+          "type": "node",
+          "request": "launch",
+          "program": "${workspaceFolder}/.vscode/empty.js",
+          "preLaunchTask": "Documentation: Build",
+          "presentation": {
+            "reveal": "always",
+            "panel": "new"
+          }
+        }
     ], 
     "compounds": [
         {

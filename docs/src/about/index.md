@@ -22,7 +22,7 @@ Published under AGPL-3. See the [full license](license.md) text.
 
 | Contributor | GitHub Handle | |
 | ----------- | ------------- |-|
-| Hugh Mann| [NotARobot]() | <img src="https://github.com/[username].png" alt= “” width="64" height="64"> |
+| Hugh Mann| [NotARobot]() | <img src="https://github.com/[username].png" width="64" height="64"> |
 | Tim Sutton | [timlinux](https://github.com/timlinux) | <img src="https://github.com/timlinux.png" alt= “” width="64" height="64"> |
 
 ## Project funders/backers

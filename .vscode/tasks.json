@@ -42,5 +42,10 @@
         },
         "problemMatcher": []
       },
+      {
+        "label": "Documentation: Build",
+        "type": "shell",
+        "command": "pip install -r docs/requirements.txt && cd docs && ./build-docs-html.sh"
+      }
     ]
 }
