@@ -20,7 +20,10 @@ date: 2023-08-03
     ignore_list = [ 
     	"__init__",
     	"migrations",
-        "tests"]
+        "tests",
+        "node_modules",
+        "secret.py"
+    ]
     for root, dirs, files in os.walk("../django_project"):
         for file in files:
              file = os.path.join(root, file)

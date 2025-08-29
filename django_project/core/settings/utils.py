@@ -10,14 +10,29 @@ DJANGO_ROOT = os.path.dirname(
 
 
 def absolute_path(*args):
-    """Return absolute path of django project."""
+    """
+    Return the absolute path inside the Django project.
+
+    Parameters
+    ----------
+    *args : str
+        Path components to join with the Django project root.
+
+    Returns
+    -------
+    str
+        The absolute path inside the Django project.
+    """
     return os.path.join(DJANGO_ROOT, *args)
 
 
 def ensure_secret_key_file():
-    """Checks that secret.py exists in settings dir.
+    """
+    Ensure that ``secret.py`` exists in the Django settings directory.
 
-    If not, creates one with a random generated SECRET_KEY setting."""
+    If the file does not exist, it will be created and populated with a
+    randomly generated ``SECRET_KEY`` suitable for Django settings.
+    """
     secret_path = absolute_path('core', 'settings', 'secret.py')
     if not os.path.exists(secret_path):
         from django.utils.crypto import get_random_string

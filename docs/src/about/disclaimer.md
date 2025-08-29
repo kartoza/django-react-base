@@ -1,12 +1,12 @@
 ---
-title: GeoSight-OS Documentation Home 
-summary: GeoSight is UNICEF's geospatial web-based business intelligence platform.
-    - Tim Sutton
-    - Irwan Fathurrahman
-date: 2023-08-03
-some_url: https://github.com/unicef-drp/GeoSight-OS
-copyright: Copyright 2023, Unicef
-contact: geosight-no-reply@unicef.org
+title: PROJECT_TITLE
+summary: PROJECT_SUMMARY
+    - PERSON_1
+    - PERSON_2
+date: DATE
+some_url: PROJECT_GITHUB_URL
+copyright: Copyright 2023, PROJECT_OWNER
+contact: PROJECT_CONTACT
 license: This program is free software; you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
 #context_id: 1234
 ---

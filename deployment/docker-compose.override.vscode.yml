@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  worker:
+    image: kartoza/${COMPOSE_PROJECT_NAME:-django_react_base}:dev
+    build:
+      context: ../
+      dockerfile: deployment/docker/Dockerfile
+      target: vscode
+
+  celery_beat:
+    image: kartoza/${COMPOSE_PROJECT_NAME:-django_react_base}:dev
+    build:
+      context: ../
+      dockerfile: deployment/docker/Dockerfile
+      target: dev
+
+  dev:
+    volumes:
+      - ../:/home/web/project
+      - ../django_project:/home/web/django_project
+      - ./volumes/static:/home/web/static
+      - ./volumes/media:/home/web/media
+    entrypoint: []
