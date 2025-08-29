@@ -20,7 +20,7 @@ services:
       - ./volumes/media:/home/web/media
 
   worker:
-    image: kartoza/${COMPOSE_PROJECT_NAME:-django_project}_dev
+    image: kartoza/${COMPOSE_PROJECT_NAME:-django_react_base}:dev
     build:
       context: ../
       dockerfile: deployment/docker/Dockerfile
@@ -31,7 +31,7 @@ services:
       - ./volumes/media:/home/web/media
 
   celery_beat:
-    image: kartoza/${COMPOSE_PROJECT_NAME:-django_project}_dev
+    image: kartoza/${COMPOSE_PROJECT_NAME:-django_react_base}:dev
     build:
       context: ../
       dockerfile: deployment/docker/Dockerfile
@@ -46,7 +46,7 @@ services:
       context: ../
       dockerfile: deployment/docker/Dockerfile
       target: dev
-    image: kartoza/${COMPOSE_PROJECT_NAME:-django_project}_dev
+    image: kartoza/${COMPOSE_PROJECT_NAME:-django_react_base}:dev
     volumes:
       - ../django_project:/home/web/django_project
       - ./volumes/static:/home/web/static
@@ -68,7 +68,7 @@ services:
       context: ../
       dockerfile: deployment/docker/Dockerfile
       target: dev
-    image: kartoza/${COMPOSE_PROJECT_NAME:-django_project}_dev
+    image: kartoza/${COMPOSE_PROJECT_NAME:-django_react_base}:dev
     env_file:
       - .env
     entrypoint: [ "/home/web/django_project/entrypoint.dev.sh" ]
