@@ -20,10 +20,9 @@ Published under AGPL-3. See the [full license](license.md) text.
 ## Contributors
 <!-- Tim is an example on what a contributor should look like -->
 
-| Contributor | GitHub Handle | |
-| ----------- | ------------- |-|
-| Hugh Mann| [NotARobot]() | <img src="https://github.com/[username].png" alt= “” width="64" height="64"> |
-| Tim Sutton | [timlinux](https://github.com/timlinux) | <img src="https://github.com/timlinux.png" alt= “” width="64" height="64"> |
+| Contributor | GitHub Handle                         | |
+|-------------|---------------------------------------|-|
+| Kartoza     | [Kartoza](https://github.com/kartoza) | <img src="https://github.com/kartoza.png" width="64" height="64"> |
 
 ## Project funders/backers
 
