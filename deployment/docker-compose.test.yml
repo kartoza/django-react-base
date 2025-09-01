@@ -1,0 +1,84 @@
+volumes:
+  media-data:
+
+# Exactly the same as production but for dev env, we expose the port and uses
+# different port for the web.
+version: '3.4'
+services:
+  # Celery worker that executes celery tasks created by Django.
+  worker:
+    image: ${APP_IMAGE}:dev
+    container_name: "django_react_base-worker"
+    volumes:
+      - media-data:/home/web/media
+      - ./docker/Dockerfile:/home/web/django_project/Dockerfile
+      - ./docker/requirements.txt:/home/web/django_project/requirements.txt
+      - ./docker/requirements-dev.txt:/home/web/django_project/requirements-dev.txt
+    environment:
+      # editable in .env
+      - DATABASE_NAME=django
+      - DATABASE_USERNAME=docker
+      - DATABASE_PASSWORD=docker
+      - DATABASE_HOST=db
+      - RABBITMQ_HOST=rabbitmq
+      - DJANGO_SETTINGS_MODULE=core.settings.dev
+      - INITIAL_FIXTURES=True
+      - SECRET_KEY=SECRET_KEY
+
+      # Redis config
+      - REDIS_HOST=redis
+      - REDIS_PASSWORD=redis_password
+
+      # Email where alters should be sent. This will be used by let's encrypt and as the django admin email.
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASSWORD=admin
+      - ADMIN_EMAIL=admin@example.com
+      - SENTRY_DSN=
+      - SENTRY_ENVIRONMENT=staging
+      - PLUGINS=tenants,reference_dataset,cloud_native_gis
+    command: 'celery -A core worker -l info --logfile=/tmp/worker.log'
+    entrypoint: [ ]
+    links:
+      - db
+      - redis
+    working_dir: /home/web/django_project
+
+  dev:
+    image: ${APP_IMAGE}:dev
+    container_name: "django_react_base-dev"
+    links:
+      - db
+      - redis
+      - worker
+    volumes:
+      - media-data:/home/web/media
+      - ./docker/Dockerfile:/home/web/django_project/Dockerfile
+      - ./docker/requirements.txt:/home/web/django_project/requirements.txt
+      - ./docker/requirements-dev.txt:/home/web/django_project/requirements-dev.txt
+    environment:
+      # editable in .env
+      - DATABASE_NAME=django
+      - DATABASE_USERNAME=docker
+      - DATABASE_PASSWORD=docker
+      - DATABASE_HOST=db
+      - RABBITMQ_HOST=rabbitmq
+      - DJANGO_SETTINGS_MODULE=core.settings.test
+      - INITIAL_FIXTURES=True
+      - SECRET_KEY=SECRET_KEY
+
+      # Redis config
+      - REDIS_HOST=redis
+      - REDIS_PASSWORD=redis_password
+
+      # Email where alters should be sent. This will be used by let's encrypt and as the django admin email.
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASSWORD=admin
+      - ADMIN_EMAIL=admin@example.com
+      - SENTRY_DSN=
+      - SENTRY_ENVIRONMENT=staging
+      - PLUGINS=tenants,reference_dataset,cloud_native_gis
+    entrypoint: [ ]
+    ports:
+      # for django test server
+      - "8000:8080"
+    working_dir: /home/web/django_project

@@ -7,30 +7,12 @@ volumes:
   database:
   nginx-cache:
   backups-data:
-  data-volume:
 
 x-common-django:
   &default-common-django
   image: kartoza/${COMPOSE_PROJECT_NAME:-django_project}:${DJANGO_TAG:-0.0.1}
-  environment:
-    # editable in .env
-    - DATABASE_NAME=${DATABASE_NAME:-django}
-    - DATABASE_USERNAME=${DATABASE_USERNAME:-docker}
-    - DATABASE_PASSWORD=${DATABASE_PASSWORD:-docker}
-    - DATABASE_HOST=${DATABASE_HOST:-db}
-    - REDIS_HOST=${REDIS_HOST:-redis}
-    - REDIS_PASSWORD=${REDIS_PASSWORD:-redis_password}
-    - RABBITMQ_HOST=${RABBITMQ_HOST:-rabbitmq}
-    - DJANGO_SETTINGS_MODULE=${DJANGO_SETTINGS_MODULE:-core.settings.prod}
-    - INITIAL_FIXTURES=${INITIAL_FIXTURES:-False}
-    - CSRF_TRUSTED_ORIGINS=${CSRF_TRUSTED_ORIGINS:-[]}
-    - SENTRY_ENVIRONMENT=${SENTRY_ENVIRONMENT:-production}
-    - SENTRY_DSN=${SENTRY_DSN:-}
-
-    # Email where alters should be sent. This will be used by let's encrypt and as the django admin email.
-    - ADMIN_USERNAME=${ADMIN_USERNAME:-admin}
-    - ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin}
-    - ADMIN_EMAIL=${ADMIN_EMAIL:-admin@example.com}
+  env_file:
+    - .env
   volumes:
     - static-data:/home/web/static
     - media-data:/home/web/media
@@ -38,14 +20,14 @@ x-common-django:
 
 services:
   redis:
-    image: bitnami/redis:7.0.2
+    image: bitnami/redis:8.2.1
     environment:
       - REDIS_PASSWORD=${REDIS_PASSWORD:-redis_password}
 
   db:
-    image: kartoza/postgis:14-3.3
+    image: kartoza/postgis:17-3.5
     volumes:
-      - data-volume:/opt/postgres/data
+      - database:/opt/postgres/data
     environment:
       - DATADIR=/opt/postgres/data
       - ALLOW_IP_RANGE=0.0.0.0/0
@@ -54,11 +36,11 @@ services:
       - POSTGRES_PASS=${DATABASE_PASSWORD:-docker}
 
   dbbackups:
-    image: kartoza/pg-backup:14-3.3
+    image: kartoza/pg-backup:17-3.5
     environment:
       # take care to let the project name below match that
       # declared in the top of the makefile
-      - DUMPPREFIX=PG_GeoSight
+      - DUMPPREFIX=PG_Django
       # These are all defaults anyway, but setting explicitly in
       # case we ever want to ever use different credentials
       - POSTGRES_USER=${DATABASE_USERNAME:-docker}
@@ -70,6 +52,8 @@ services:
     volumes:
       - backups-data:/backups
     restart: on-failure:5
+    links:
+      - db
 
   django:
     <<: *default-common-django
@@ -83,11 +67,16 @@ services:
     entrypoint: []
     command: 'celery -A core worker -l info'
     links:
+      - db
       - redis
 
-  dev:
+  celery_beat:
     <<: *default-common-django
-    entrypoint: []
+    entrypoint: [ ]
+    command: 'celery -A core beat --loglevel=info --scheduler django_celery_beat.schedulers:DatabaseScheduler'
+    links:
+      - db
+      - redis
 
   nginx:
     image: nginx

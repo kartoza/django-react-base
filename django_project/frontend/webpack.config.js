@@ -9,7 +9,7 @@ const mode = process.env.npm_lifecycle_script;
 const isDev = (mode.includes('dev'));
 const isServe = (mode.includes('serve'));
 const filename = isDev ? "[name]" : "[name].[fullhash]";
-const statsFilename = isDev ? './webpack-stats.dev.json' : './webpack-stats.prod.json';
+const statsFilename = isDev ? 'webpack-stats.dev.json' : 'webpack-stats.prod.json';
 const minimized = !isDev;
 
 let conf = {
@@ -62,7 +62,10 @@ let conf = {
           'process.env.NODE_DEBUG': JSON.stringify(process.env.NODE_DEBUG),
         }),
         new CleanWebpackPlugin(),
-        new BundleTracker({ filename: statsFilename }),
+        new BundleTracker({
+              path: path.resolve(__dirname),
+              filename: statsFilename
+        }),
         new MiniCssExtractPlugin({
             filename: filename + '.css',
             chunkFilename: filename + '.css',

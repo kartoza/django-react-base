@@ -6,7 +6,7 @@ RUN apt-get update -y && \
     spatialite-bin libsqlite3-mod-spatialite \
     python3-dev python3-gdal python3-psycopg2 python3-ldap \
     python3-pip python3-pil python3-lxml python3-pylibmc \
-    uwsgi uwsgi-plugin-python3
+    uwsgi uwsgi-plugin-python3 curl
 
 # Install pip packages
 ADD deployment/docker/requirements.txt /requirements.txt
@@ -28,7 +28,7 @@ WORKDIR /home/web/django_project
 ENTRYPOINT ["/home/web/django_project/entrypoint.sh"]
 CMD ["uwsgi", "--ini", "/uwsgi.conf"]
 
-FROM prod as vscode
+FROM prod AS vscode
 
 ADD deployment/docker/requirements-dev.txt /requirements-dev.txt
 RUN pip install -r /requirements-dev.txt
@@ -55,7 +55,7 @@ RUN apt-get update && apt-get install -y gnupg2
 # [Optional] Set the default user. Omit if you want to keep the default as root.
 USER $USERNAME
 
-FROM prod as dev
+FROM prod AS dev
 
 # This section taken on 2 July 2015 from
 # https://docs.docker.com/examples/running_ssh_service/
