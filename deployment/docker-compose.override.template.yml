@@ -78,6 +78,8 @@ services:
       - ./volumes/media:/home/web/media
     ports:
       - "8000:8080"
+      # for ssh
+      - "8001:22"
     links:
       - db
       - redis

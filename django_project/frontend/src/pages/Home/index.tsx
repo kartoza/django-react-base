@@ -1,6 +1,6 @@
 import React from 'react';
-import './styles/App.scss';
-import Navbar from "./components/NavBar";
+
+import './style.scss';
 
 function Home() {
 
@@ -10,7 +10,6 @@ function Home() {
 
   return (
     <div className="App">
-      <Navbar />
       <div className="AppContent">
         <p>
           Welcome to Kartoza Django React Base

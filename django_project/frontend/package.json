@@ -7,12 +7,9 @@
     "@chakra-ui/react": "^3.26.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
-    "@mui/material": "^6.1.4",
     "@sentry/browser": "^10.7.0",
     "@sentry/react": "^10.7.0",
     "@sentry/tracing": "^7.120.4",
-    "@testing-library/jest-dom": "^6.8.0",
-    "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
@@ -25,7 +22,8 @@
   },
   "scripts": {
     "serve": "webpack serve --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "test": "jest"
   },
   "eslintConfig": {
     "extends": [
@@ -46,14 +44,26 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.6.1",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "@types/jest": "^30.0.0",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
+    "babel-jest": "^30.1.2",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^7.1.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^30.1.2",
+    "jest-environment-jsdom": "^30.1.2",
     "mini-css-extract-plugin": "^2.9.4",
     "sass": "^1.91.0",
     "sass-loader": "^16.0.5",
-    "ts-loader": "^9.5.4"
+    "ts-jest": "^29.4.1",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.2"
   }
 }
