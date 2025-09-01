@@ -62,7 +62,7 @@ services:
       - DATABASE_PASSWORD=docker
       - DATABASE_HOST=db
       - RABBITMQ_HOST=rabbitmq
-      - DJANGO_SETTINGS_MODULE=core.settings.dev
+      - DJANGO_SETTINGS_MODULE=core.settings.test
       - INITIAL_FIXTURES=True
       - SECRET_KEY=SECRET_KEY
 
