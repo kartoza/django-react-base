@@ -19,10 +19,9 @@ git clone https://github.com/kartoza/django-react-base.git
 cd django-react-base
 ```
 
-- Copy and customize the environment file and the Docker Compose override file from the template.
+- Prepare the files
 ```
-cp deployment/.template.env deployment/.env
-cp deployment/docker-compose.override.template.yml deployment/docker-compose.override.yml
+./setup.sh
 ```
 
 - Build the project using the provided command in makefile
@@ -33,6 +32,16 @@ make build
 - Run the application using Docker and the provided makefile
 ```
 make run
+```
+
+- Development using vscode
+- If it has been run before
+```
+make down
+```
+- Run vscode
+```
+./vscode.sh
 ```
 
 
