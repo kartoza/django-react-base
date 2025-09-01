@@ -1,18 +1,15 @@
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 let url = '/';
 
 
-test.describe('navigation', () => {
+test.describe('Check page', () => {
   test.beforeEach(async ({ page }) => {
     // Go to the starting url before each test.
     await page.goto(url);
   });
 
-  test('has title', async ({ page }) => {
-    await page.waitForSelector('.landing-page-banner-text-header', { timeout: 2000 });
-    await expect(page.locator('div.landing-page-banner-text-header')).toHaveText();
+  test('has navbar', async ({ page }) => {
+    await expect(page.locator('.chakra-heading')).toContainText('Kartoza Django React Base');
   })
-  test('navigates', async ({page}) => {
-  });
 });

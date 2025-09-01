@@ -69,7 +69,6 @@ services:
     links:
       - db
       - redis
-      - celery_beat
 
   celery_beat:
     <<: *default-common-django
