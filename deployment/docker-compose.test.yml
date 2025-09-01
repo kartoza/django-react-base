@@ -80,5 +80,5 @@ services:
     entrypoint: [ ]
     ports:
       # for django test server
-      - "2000:2000"
+      - "8000:8080"
     working_dir: /home/web/django_project
