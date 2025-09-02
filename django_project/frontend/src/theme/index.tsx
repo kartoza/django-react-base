@@ -8,7 +8,7 @@ export const kartozaTheme = createSystem(defaultConfig, {
         primary: {
           main: { value: "#57A0C7" }
         },
-        secondry: {
+        secondary: {
           main: { value: "#ECB44B" }
         },
       },

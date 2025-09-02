@@ -11,7 +11,7 @@ function Navbar() {
   return (
     <Box as="header" bg="primary.main" px={4} py={2} shadow="md">
       <Box>
-        <Heading as="h1" size="md" color="white">
+        <Heading as="h1" size="md">
           Kartoza Django React Base
         </Heading>
       </Box>
@@ -19,10 +19,8 @@ function Navbar() {
         <Icon as={FaBug} boxSize={6} onClick={errorButtonClicked}
               cursor="pointer"/>
         {/* TODO: Create our own variant*/}
-        <Button
-          variant="outline" color="white"
-          _hover={{ color: 'primary.main' }}
-        >
+        {/* @ts-ignore */}
+        <Button variant="primary.outline">
           Login
         </Button>
       </Box>
