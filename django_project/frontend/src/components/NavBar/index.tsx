@@ -17,6 +17,7 @@ function Navbar() {
         </Heading>
       </Box>
       <Box>
+        <Link to="/map">Map</Link>
         <Link to="/about">About</Link>
         <Button variant="primary.outline">
           Login

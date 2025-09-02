@@ -12,7 +12,7 @@ function Page({ title, children }: Props) {
   }, [title]);
 
   return (
-    <Box className="App" p="1rem">{children}</Box>
+    <Box className="App">{children}</Box>
   )
 }
 

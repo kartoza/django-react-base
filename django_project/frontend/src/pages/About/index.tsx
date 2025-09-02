@@ -1,13 +1,16 @@
 import React from 'react';
+import { Box } from "@chakra-ui/react";
 
 import './style.scss';
 
 function About() {
 
   return (
-    <p>
-      This is about
-    </p>
+    <Box p="1rem">
+      <p>
+        This is about
+      </p>
+    </Box>
   );
 }
 

@@ -27,9 +27,7 @@ root.render(
       <React.StrictMode>
         <Router>
           <Navbar/>
-          <div className="App">
-            <AppRoutes/>
-          </div>
+          <AppRoutes/>
         </Router>
       </React.StrictMode>
     </ChakraProvider>
