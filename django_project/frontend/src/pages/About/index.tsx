@@ -3,15 +3,15 @@ import { Box } from "@chakra-ui/react";
 
 import './style.scss';
 
-function Home() {
+function About() {
 
   return (
     <Box p="1rem">
       <p>
-        Welcome to Kartoza Django React Base
+        This is about
       </p>
     </Box>
   );
 }
 
-export default Home;
+export default About;

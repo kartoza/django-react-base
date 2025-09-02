@@ -1,43 +1,52 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Django: Initialize",
-            "type": "shell",
-            "command": "python",
-            "args": [
-                "-u",
-                "${workspaceFolder}/django_project/initialize.py"
-            ],
-            "problemMatcher": [],
-            "presentation": {
-                "close": true
-            }
-        },
-        {
-            "label": "Django: Migrate",
-            "type": "shell",
-            "command": "python manage.py migrate",
-            "group": "build",
-            "options": {
-                "cwd": "${workspaceFolder}/django_project"
-            },
-            "problemMatcher": []
-        },
-        {
-            "label": "Django: Make Migrations",
-            "type": "shell",
-            "command": "python manage.py makemigrations",
-            "group": "build",
-            "options": {
-                "cwd": "${workspaceFolder}/django_project"
-            },
-            "problemMatcher": []
-        },
-        {
-            "label": "Documentation: Build",
-            "type": "shell",
-            "command": "pip install -r docs/requirements.txt && cd docs && ./build-docs-html.sh"
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Django: Initialize",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "-u",
+        "${workspaceFolder}/django_project/initialize.py"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "close": true
+      }
+    },
+    {
+      "label": "Django: Migrate",
+      "type": "shell",
+      "command": "python manage.py migrate",
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}/django_project"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Django: Make Migrations",
+      "type": "shell",
+      "command": "python manage.py makemigrations",
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}/django_project"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Documentation: Build",
+      "type": "shell",
+      "command": "pip install -r docs/requirements.txt && cd docs && ./build-docs-html.sh"
+    },
+    {
+      "label": "Playwright: Install Deps",
+      "type": "shell",
+      "command": "npm install && npm ci && npx playwright install",
+      "options": {
+        "cwd": "${workspaceFolder}/playwright/ci-test"
+      },
+      "problemMatcher": []
+    }
+  ]
 }

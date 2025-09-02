@@ -1,36 +1,59 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Django: Run server",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceFolder}/django_project/manage.py",
-            "args": [
-                "runserver",
-                "0.0.0.0:8080"
-            ],
-            "envFile": "${workspaceFolder}/deployment/.env",
-            "django": true,
-            "justMyCode": true,
-            "env": {
-                "DJANGO_SETTINGS_MODULE": "core.settings.dev"
-            },
-            "preLaunchTask": "Django: Initialize"
-        },
-        {
-          "name": "Documentation: Build",
-          "type": "node",
-          "request": "launch",
-          "program": "${workspaceFolder}/.vscode/empty.js",
-          "preLaunchTask": "Documentation: Build",
-          "presentation": {
-            "reveal": "always",
-            "panel": "new"
-          }
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Django: Run server",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/django_project/manage.py",
+      "args": [
+        "runserver",
+        "0.0.0.0:8080"
+      ],
+      "envFile": "${workspaceFolder}/deployment/.env",
+      "django": true,
+      "justMyCode": true,
+      "env": {
+        "DJANGO_SETTINGS_MODULE": "core.settings.dev"
+      },
+      "preLaunchTask": "Django: Initialize"
+    },
+    {
+      "name": "Documentation: Build",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/.vscode/empty.js",
+      "preLaunchTask": "Documentation: Build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "name": "Playwright: Test UI",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/playwright/ci-test/node_modules/.bin/playwright",
+      "args": [
+        "test",
+        "--ui"
+      ],
+      "cwd": "${workspaceFolder}/playwright/ci-test",
+      "preLaunchTask": "Playwright: Install Deps"
+    },
+    {
+      "name": "Playwright: Codegen",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/playwright/ci-test/node_modules/.bin/playwright",
+      "args": [
+        "codegen"
+      ],
+      "cwd": "${workspaceFolder}/playwright/ci-test",
+      "preLaunchTask": "Playwright: Install Deps"
+    }
+  ]
 }

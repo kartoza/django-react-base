@@ -5,10 +5,11 @@ import { ChakraProvider } from "@chakra-ui/react";
 
 import reportWebVitals from './reportWebVitals';
 import ErrorBoundary from "./components/ErrorBoundary";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import { kartozaTheme } from "./theme";
 import Navbar from "./components/NavBar";
-import Home from "./pages/Home";
+import AppRoutes from './routes';
 
 import './styles/index.scss';
 
@@ -24,8 +25,10 @@ root.render(
   <ErrorBoundary>
     <ChakraProvider value={kartozaTheme}>
       <React.StrictMode>
-        <Navbar/>
-        <Home/>
+        <Router>
+          <Navbar/>
+          <AppRoutes/>
+        </Router>
       </React.StrictMode>
     </ChakraProvider>
   </ErrorBoundary>

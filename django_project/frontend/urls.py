@@ -14,10 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-from .views import HomeView, SentryProxyView
+
+from .views import FrontendView, SentryProxyView
 
 urlpatterns = [
-    path('', HomeView.as_view(), name='home'),
-    path('sentry-proxy/', 
+    path('sentry-proxy/',
          SentryProxyView.as_view(), name='sentry-proxy'),
+    path('', FrontendView.as_view(), name='frontend'),
+    path('<str:text>', FrontendView.as_view(), name='frontend'),
 ]
