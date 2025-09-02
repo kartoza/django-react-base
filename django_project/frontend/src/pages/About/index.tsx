@@ -2,13 +2,13 @@ import React from 'react';
 
 import './style.scss';
 
-function Home() {
+function About() {
 
   return (
     <p>
-      Welcome to Kartoza Django React Base
+      This is about
     </p>
   );
 }
 
-export default Home;
+export default About;

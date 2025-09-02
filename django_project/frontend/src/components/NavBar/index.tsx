@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Button, Heading, Icon } from '@chakra-ui/react';
+import { Box, Button, Icon } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 import { FaBug } from "react-icons/fa"
 
 import './style.scss';
@@ -11,18 +12,17 @@ function Navbar() {
   return (
     <Box as="header" bg="primary.main" px={4} py={2} shadow="md">
       <Box>
-        <Heading as="h1" size="md">
-          Kartoza Django React Base
-        </Heading>
+        <Link to="/">Kartoza Django React Base</Link>
       </Box>
       <Box>
-        <Icon as={FaBug} boxSize={6} onClick={errorButtonClicked}
-              cursor="pointer"/>
-        {/* TODO: Create our own variant*/}
-        {/* @ts-ignore */}
+        <Link to="/about">About</Link>
         <Button variant="primary.outline">
           Login
         </Button>
+        <Icon
+          as={FaBug}
+          onClick={errorButtonClicked}
+          cursor="pointer"/>
       </Box>
     </Box>
   );
