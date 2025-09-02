@@ -1,4 +1,12 @@
-.nav-bar-title {
-  flex-grow: 1;
-  text-align: start;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
 }
