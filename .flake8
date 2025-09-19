@@ -1,0 +1,36 @@
+# .flake8
+[flake8]
+# Core style
+max-line-length = 100
+max-complexity = 10
+extend-ignore =
+    E203,W503,
+    D200,D212,D411,D415,
+    D203,D100,D104,D101
+select = E,F,W,C90,D
+
+# Docstrings (flake8-docstrings / pydocstyle)
+docstring-convention = google
+
+# Project hygiene
+exclude =
+    .git,
+    __pycache__,
+    .venv,
+    venv,
+    .tox,
+    .mypy_cache,
+    .pytest_cache,
+    node_modules,
+    build,
+    dist,
+    core/settings/utils.py,
+    *.egg-info,
+    */static/*,
+    */media/*
+
+# Per-file relaxations
+per-file-ignores =
+    __init__.py:F401
+    core/settings/*.py:F401,F403,F405,D100
+    */migrations/*:D100,D101,D102,D103,D104,D105,D106,D107

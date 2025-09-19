@@ -15,9 +15,10 @@ class FrontendView(TemplateView):
 @method_decorator(csrf_exempt, name="dispatch")
 class SentryProxyView(View):
     sentry_key = settings.SENTRY_DSN
+
     def post(self, request):
+        """Sentry proxy post method"""
         host = "sentry.io"
-        known_project_ids = [36]  # Add your Sentry project IDs here
 
         envelope = request.body.decode("utf-8")
         pieces = envelope.split("\n", 1)
