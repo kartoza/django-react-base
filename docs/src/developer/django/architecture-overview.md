@@ -26,14 +26,4 @@ Django React Base is built on a modern web stack template that leverages the pow
 
 ### Architecture Diagram
 
-```mermaid
-graph TD
-    PostgreSQL["PostgreSQL"]
-    Docker["Docker"]
-    Django["Django / GeoDjango"]
-
-    Docker --> Django
-    Docker --> PostgreSQL
-    Docker --> Celery  --> PostgreSQL
-    Redis --> Celery
-```
+To be populated
