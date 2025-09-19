@@ -86,11 +86,10 @@ let conf = {
     }
 };
 if (isServe) {
-  // Single, consistent output
   conf.output = {
     path: path.resolve(__dirname, "./bundles/frontend"),
     filename: filename + ".js",
-    publicPath: "http://dev.local:9000/static/",
+    publicPath: "http://localhost:9000/static/",
   };
 
   conf.devServer = {
@@ -99,7 +98,6 @@ if (isServe) {
     allowedHosts: "all",
     compress: true,
 
-    // 👇 prevent webpack-dev-server from serving ./public and using serve-index
     static: false,
 
     devMiddleware: {
