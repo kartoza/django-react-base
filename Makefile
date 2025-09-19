@@ -60,7 +60,7 @@ dev-ci-test: ensure-dev-files
 	@echo "------------------------------------------------------------------"
 	@echo "Running in DEVELOPMENT mode for CI test"
 	@echo "------------------------------------------------------------------"
-	@docker compose $(ARGS) up --no-recreate --no-deps -d db worker redis dev
+	@docker compose $(ARGS) up --no-recreate --no-deps -d db worker rabbitmq dev
 
 dev-entrypoint:
 	@echo

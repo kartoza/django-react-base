@@ -71,7 +71,6 @@ services:
     image: kartoza/${COMPOSE_PROJECT_NAME:-django_react_base}:dev
     env_file:
       - .env
-    entrypoint: [ "/home/web/django_project/entrypoint.dev.sh" ]
     volumes:
       - ../django_project:/home/web/django_project
       - ./volumes/static:/home/web/static
@@ -82,7 +81,8 @@ services:
       - "8001:22"
     links:
       - db
-      - redis
+      - rabbitmq
+      - memcached
       - worker
       - webpack
     depends_on:
