@@ -23,3 +23,4 @@ date: 2023-08-03
 ::: core.settings.prod
 ::: core.settings.contrib
 ::: core.settings.utils
+::: core.settings.test

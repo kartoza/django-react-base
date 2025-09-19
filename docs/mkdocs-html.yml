@@ -10,10 +10,10 @@ theme:
     - content.code.annotate
     - content.tabs.link
     - header.autohide
-#    - navigation.expand # This causes the nav menu to auto expand
+    - navigation.expand
     - navigation.indexes
     - navigation.instant
-#    - navigation.sections # This removes the ability to shrink sections on the nav menu but gives the bold headings
+    - navigation.sections
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
@@ -96,25 +96,10 @@ plugins:
         #'old.md': 'new.md'
         #'old/file.md': 'new/file.md'
         #'some_file.md': 'http://external.url.com/foobar'
-  - enumerate-headings:
-      toc_depth: 3
-      strict: true
-      increment_across_pages: true
-      include:
-        - "*"
-      exclude:
-        - index.md
-        - user/index.md
-        - administrator/index.md
-        - developer/index.md
-        - developer/manual/*.md
-        - devops/index.md
-      restart_increment_after:
-        - second_section.md
 
 # Hook to add a uuid to every anchor
 # see also hook.py and https://github.com/squidfunk/mkdocs-material/discussions/3758#discussioncomment-4397373
 # Note that although the above link implies you can use UUIDs, you have to use numeric IDS not UUIDS
-hooks:
-  - ./uuid_redirects_hook.py
-  - ./python_manual_hook.py
+#hooks:
+#  - ./uuid_redirects_hook.py
+#  - ./python_manual_hook.py

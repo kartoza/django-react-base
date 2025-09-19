@@ -20,7 +20,7 @@ x-common-django:
 
 services:
   redis:
-    image: bitnami/redis:8.2.1
+    image: bitnamilegacy/redis:8.2.1
     environment:
       - REDIS_PASSWORD=${REDIS_PASSWORD:-redis_password}
 
