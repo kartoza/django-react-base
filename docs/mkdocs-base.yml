@@ -41,47 +41,47 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
       emoji_index: !!python/name:material.extensions.emoji.twemoji
 
-# Navigation
 nav:
-        - Home:
-                  - Home: index.md
-                  - Code of Conduct: about/code-of-conduct.md
-                  - License: about/license.md
-                  - Running Instances: about/running-instances.md
-        - User:
-                  - user/index.md
-                  - Quickstart: user/quickstart/index.md
-                  - Guide:
-                          - user/guide/index.md
-                  - Manual :
-                          - user/manual/index.md
-        - Administrators:
-                - administrator/index.md
-                - Guide:
-                        - administrator/guide/index.md
-                - Manual:
-                        - administrator/manual/index.md
-        - Developers:
-                - developer/index.md
-                - Django Application:
-                        - Overview: developer/django/architecture-overview.md
-                        - Getting Started:
-                          - "Before you start": developer/django/setup/index.md
-                          - "Windows 11 Pro": developer/django/setup/setup-win/index.md
-                          - "macOS 15": developer/django/setup/setup-mac/index.md
-                          - "Ubuntu Linux 24.04 LTR": developer/django/setup/setup-linux/index.md
-                          - "Generic Steps":
-                              - "Overview": developer/django/setup/setup-generic/index.md
-                              - "Cloning": developer/django/setup/setup-generic/cloning.md
-                              - "Configuration": developer/django/setup/setup-generic/configuration.md
-                              - "Running":
-                                  - "Overview": developer/django/setup/setup-generic/run/index.md
-                                  - "VSCode": developer/django/setup/setup-generic/run/run-with-vscode.md
-                                  - "CLI": developer/django/setup/setup-generic/run/run-without-ide.md
-                              - "Removing": developer/django/setup/setup-generic/removing.md
-        - About:
-                  - About: about/index.md
-                  - License: about/license.md
-                  - Contributing: about/contributing.md
-                  - Disclaimer: about/disclaimer.md
+  # Navigation
+  - Home:
+      - Home: index.md
+      - Code of Conduct: about/code-of-conduct.md
+      - License: about/license.md
+      - Running Instances: about/running-instances.md
+  - User:
+      - user/index.md
+      - Quickstart: user/quickstart/index.md
+      - Guide:
+          - user/guide/index.md
+      - Manual:
+          - user/manual/index.md
+  - Administrators:
+      - administrator/index.md
+      - Guide:
+          - administrator/guide/index.md
+      - Manual:
+          - administrator/manual/index.md
+  - Developers:
+      - developer/index.md
+      - Django Application:
+          - Overview: developer/django/architecture-overview.md
+          - Getting Started:
+              - "Before you start": developer/django/setup/index.md
+              - "Windows 11 Pro": developer/django/setup/setup-win/index.md
+              - "macOS 15": developer/django/setup/setup-mac/index.md
+              - "Ubuntu Linux 24.04 LTR": developer/django/setup/setup-linux/index.md
+              - "Generic Steps":
+                  - "Overview": developer/django/setup/setup-generic/index.md
+                  - "Cloning": developer/django/setup/setup-generic/cloning.md
+                  - "Configuration": developer/django/setup/setup-generic/configuration.md
+                  - "Running":
+                      - "Overview": developer/django/setup/setup-generic/run/index.md
+                      - "VSCode": developer/django/setup/setup-generic/run/run-with-vscode.md
+                      - "CLI": developer/django/setup/setup-generic/run/run-without-ide.md
+                  - "Removing": developer/django/setup/setup-generic/removing.md
+  - About:
+      - About: about/index.md
+      - License: about/license.md
+      - Contributing: about/contributing.md
+      - Disclaimer: about/disclaimer.md
 
