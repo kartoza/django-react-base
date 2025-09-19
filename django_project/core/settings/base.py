@@ -134,12 +134,14 @@ STATICFILES_STORAGE = (
 )
 
 CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.redis.RedisCache',
-        'LOCATION': (
-            f'redis://default:{os.environ.get("REDIS_PASSWORD", "")}'
-            f'@{os.environ.get("REDIS_HOST", "")}',
-        )
+    "default": {
+        "BACKEND": "django.core.cache.backends.memcached.PyMemcacheCache",
+        "LOCATION": "memcached:11211",
+        "TIMEOUT": 600,
+        "OPTIONS": {
+            "no_delay": True,
+            "ignore_exc": True,
+        },
     }
 }
 

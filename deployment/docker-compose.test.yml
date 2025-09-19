@@ -25,9 +25,10 @@ services:
       - INITIAL_FIXTURES=True
       - SECRET_KEY=SECRET_KEY
 
-      # Redis config
-      - REDIS_HOST=redis
-      - REDIS_PASSWORD=redis_password
+      # Rabbitmq config
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=password
+      - RABBITMQ_HOST=rabbitmq
 
       # Email where alters should be sent. This will be used by let's encrypt and as the django admin email.
       - ADMIN_USERNAME=admin
@@ -40,7 +41,8 @@ services:
     entrypoint: [ ]
     links:
       - db
-      - redis
+      - rabbitmq
+      - memcached
     working_dir: /home/web/django_project
 
   dev:
@@ -48,7 +50,8 @@ services:
     container_name: "django_react_base-dev"
     links:
       - db
-      - redis
+      - rabbitmq
+      - memcached
       - worker
     volumes:
       - media-data:/home/web/media
@@ -66,9 +69,10 @@ services:
       - INITIAL_FIXTURES=True
       - SECRET_KEY=SECRET_KEY
 
-      # Redis config
-      - REDIS_HOST=redis
-      - REDIS_PASSWORD=redis_password
+      # Rabbitmq config
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=password
+      - RABBITMQ_HOST=rabbitmq
 
       # Email where alters should be sent. This will be used by let's encrypt and as the django admin email.
       - ADMIN_USERNAME=admin

@@ -44,6 +44,11 @@ AUTHENTICATION_BACKENDS = (
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 CELERY_RESULT_BACKEND = 'django-db'
 
+RABBITMQ_HOST = os.getenv('RABBITMQ_HOST', 'rabbitmq')
+RABBITMQ_USER = os.getenv('RABBITMQ_DEFAULT_USER', 'guest')
+RABBITMQ_PASS = os.getenv('RABBITMQ_DEFAULT_PASS', 'password')
+CELERY_BROKER_URL = f'amqp://{RABBITMQ_USER}:{RABBITMQ_PASS}@{RABBITMQ_HOST}:5672//'
+
 TEMPLATES[0]['OPTIONS']['context_processors'] += [
     'django.template.context_processors.request',
 ]

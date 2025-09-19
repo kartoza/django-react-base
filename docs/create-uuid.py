@@ -2,4 +2,3 @@
 
 import shortuuid
 uuid = shortuuid.uuid()
-print (uuid)

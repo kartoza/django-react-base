@@ -23,6 +23,7 @@ urlpatterns = [
 
     # Always put this to bottom
     path('', include('frontend.urls')),
+    path('profiles/', include('profiles.urls')),
 ]
 
 if settings.DEBUG:

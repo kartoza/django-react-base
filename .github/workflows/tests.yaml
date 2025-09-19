@@ -28,7 +28,7 @@ jobs:
         run: pip install flake8 flake8-docstrings pydoclint[flake8]
 
       - name: Run flake8
-        run: flake8
+        run: flake8 --config=.flake8
 
   build_image:
     needs: flake
