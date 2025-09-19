@@ -20,7 +20,7 @@ Django React Base is built on a modern web stack template that leverages the pow
 - **Docker**: Used for containerization, allowing the application to run consistently across different environments.
 - **Celery**: A distributed task queue that handles background tasks, such as data processing and notifications, ensuring the application remains responsive.
 - **Redis**: Serves as the message broker and cache layer that powers Celery and improves app performance.
-- **React**: A JavaScript library for building interactive user interfaces and single-page applications (SPAs)..
+- **React**: A JavaScript library for building interactive user interfaces and single-page applications (SPAs).
 - **Chakara**: A React-based component library that provides accessible, responsive, and themeable UI components out of the box.
 - **MapLibre GL JS**: An open-source mapping library for rendering interactive maps on the frontend.
 
