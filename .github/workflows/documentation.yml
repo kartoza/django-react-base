@@ -7,6 +7,13 @@ on:
       - "documentation.yml"
       - "docs/**.md"
       - "docs/assets/**"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "documentation.yml"
+      - "docs/**.md"
+      - "docs/assets/**"
 
 jobs:
   publish_docs:
@@ -37,32 +44,34 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CONFIG_FILE: docs/mkdocs.yml
           REQUIREMENTS: requirements.txt
-  generate_pdf:
-    name: 📖 Publish docs as PDF
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout 🛒
-        uses: actions/checkout@v3
-      - name: Install dependencies
-        uses: timlinux/pip-action@v1
-        with:
-          packages: |
-            mkdocs-material 
-            qrcode
-            mkdocs-mermaid2-plugin
-      - name: Create Mkdocs Config 🚀
-        working-directory: ./docs
-        run: ./create-mkdocs-pdf-config.sh
-      - name: Build PDF 📃
-        uses: kartoza/mkdocs-deploy-build-pdf@master
-        # Uses orzih's mkdocs PDF builder
-        # https://github.com/orzih/mkdocs-with-pdf
-        env:
-          CONFIG_FILE: docs/mkdocs.yml
-          EXTRA_PACKAGES: build-base
-          #REQUIREMENTS: folder/requirements.txt
-      - name: Upload PDF Artifact ⚡
-        uses: actions/upload-artifact@v4
-        with:
-          name: docs
-          path: docs/pdfs
+#  TODO:
+#   Fix this
+#  generate_pdf:
+#    name: 📖 Publish docs as PDF
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout 🛒
+#        uses: actions/checkout@v3
+#      - name: Install dependencies
+#        uses: timlinux/pip-action@v1
+#        with:
+#          packages: |
+#            mkdocs-material
+#            qrcode
+#            mkdocs-mermaid2-plugin
+#      - name: Create Mkdocs Config 🚀
+#        working-directory: ./docs
+#        run: ./create-mkdocs-pdf-config.sh
+#      - name: Build PDF 📃
+#        uses: kartoza/mkdocs-deploy-build-pdf@master
+#        # Uses orzih's mkdocs PDF builder
+#        # https://github.com/orzih/mkdocs-with-pdf
+#        env:
+#          CONFIG_FILE: docs/mkdocs.yml
+#          EXTRA_PACKAGES: build-base
+#          #REQUIREMENTS: folder/requirements.txt
+#      - name: Upload PDF Artifact ⚡
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: docs
+#          path: docs/pdfs
