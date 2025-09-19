@@ -33,5 +33,4 @@ psycopg2-binary==2.9.10
 # This extension enables you to store the periodic task schedule in the database.
 django-celery-beat==2.8.1
 
-# Python client for Redis database and key-value store
-redis==6.4.0
+pymemcache>=4.0

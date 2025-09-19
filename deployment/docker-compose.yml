@@ -19,10 +19,21 @@ x-common-django:
   restart: on-failure
 
 services:
-  redis:
-    image: bitnamilegacy/redis:8.2.1
+  rabbitmq:
+    image: rabbitmq:3-management
+    hostname: rabbitmq
     environment:
-      - REDIS_PASSWORD=${REDIS_PASSWORD:-redis_password}
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER:-guest}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS:-guest}
+    ports:
+      - "5672:5672"
+      - "15672:15672"   # Management UI (optional)
+    restart: on-failure
+
+  memcached:
+    image: memcached:1.6-alpine
+    command: ["memcached", "-m", "128", "-I", "5m"]
+    restart: on-failure
 
   db:
     image: kartoza/postgis:17-3.5
@@ -58,9 +69,14 @@ services:
   django:
     <<: *default-common-django
     command: 'uwsgi --ini /uwsgi.conf'
+    depends_on:
+      - db
+      - rabbitmq
+      - memcached
     links:
       - db
-      - worker
+      - rabbitmq
+      - memcached
 
   worker:
     <<: *default-common-django
@@ -68,7 +84,8 @@ services:
     command: 'celery -A core worker -l info'
     links:
       - db
-      - redis
+      - rabbitmq
+      - memcached
 
   celery_beat:
     <<: *default-common-django
@@ -76,7 +93,8 @@ services:
     command: 'celery -A core beat --loglevel=info --scheduler django_celery_beat.schedulers:DatabaseScheduler'
     links:
       - db
-      - redis
+      - rabbitmq
+      - memcached
 
   nginx:
     image: nginx

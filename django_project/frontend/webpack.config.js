@@ -86,34 +86,32 @@ let conf = {
     }
 };
 if (isServe) {
-    if (isDev) {
-        conf['output'] = {
-            path: path.resolve(__dirname, "./bundles/frontend"),
-            filename: filename + '.js',
-            publicPath: 'http://localhost:9000/static/',
-        }
-    }
-    conf['devServer'] = {
-        hot: true,
-        port: 9000,
-        headers: {
-            'Access-Control-Allow-Origin': '*'
-        },
-        devMiddleware: {
-            writeToDisk: true,
-        },
-        allowedHosts: 'all',
-        compress: true,
-    }
-    conf['devtool'] = 'inline-source-map',
-    conf['output'] = {
-        path: path.resolve(__dirname, "./bundles/frontend"),
-        filename: filename + '.js',
-        publicPath: 'http://localhost:9000/static/',
-    }
-    conf['plugins'].push(
-        new ReactRefreshWebpackPlugin()
-    )
+  // Single, consistent output
+  conf.output = {
+    path: path.resolve(__dirname, "./bundles/frontend"),
+    filename: filename + ".js",
+    publicPath: "http://dev.local:9000/static/",
+  };
+
+  conf.devServer = {
+    hot: true,
+    port: 9000,
+    allowedHosts: "all",
+    compress: true,
+
+    // 👇 prevent webpack-dev-server from serving ./public and using serve-index
+    static: false,
+
+    devMiddleware: {
+      publicPath: "/static/",
+      writeToDisk: true,
+    },
+
+    headers: { "Access-Control-Allow-Origin": "*" },
+  };
+
+  conf.devtool = "inline-source-map";
+  conf.plugins.push(new ReactRefreshWebpackPlugin());
 } else if (isDev) {
     conf['output'] = {
         path: path.resolve(__dirname, "./bundles/frontend"),
