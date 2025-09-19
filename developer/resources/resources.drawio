@@ -1,0 +1,254 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="28.2.3" pages="2">
+  <diagram name="Repo Structure" id="8H4iFgWf1B_3KmsLFuvf">
+    <mxGraphModel dx="2004" dy="1284" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PEWcLykyAjey3LEXS5MI-70" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="60" width="650" height="650" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="PEWcLykyAjey3LEXS5MI-1" target="PEWcLykyAjey3LEXS5MI-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="PEWcLykyAjey3LEXS5MI-1" target="PEWcLykyAjey3LEXS5MI-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="PEWcLykyAjey3LEXS5MI-1" target="PEWcLykyAjey3LEXS5MI-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-1" value="django react base" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="90" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-2" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.folder;" vertex="1" parent="1">
+          <mxGeometry x="120" y="98" width="20" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-3" value=".devccontainer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="130" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-5" value="&lt;font style=&quot;color: rgb(33, 33, 33);&quot;&gt;&amp;nbsp;Contains VS Code devcontainer configuration&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="420" y="130" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-6" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.folder;" vertex="1" parent="1">
+          <mxGeometry x="220" y="138" width="20" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-7" value=".github" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="170" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-8" value="&lt;font style=&quot;color: rgb(33, 33, 33);&quot;&gt;&amp;nbsp;Contains github wirkflow configurations&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="420" y="170" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-9" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.folder;" vertex="1" parent="1">
+          <mxGeometry x="220" y="178" width="20" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-11" value=".run" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="210" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-12" value="&lt;span style=&quot;color: rgb(33, 33, 33);&quot;&gt;&amp;nbsp;Contains pycharm run configurations&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="420" y="210" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-13" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.folder;" vertex="1" parent="1">
+          <mxGeometry x="220" y="218" width="20" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" target="PEWcLykyAjey3LEXS5MI-16" source="PEWcLykyAjey3LEXS5MI-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="175" y="160" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-16" value=".vscode" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="250" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-17" value="&lt;span style=&quot;color: rgb(33, 33, 33);&quot;&gt;&amp;nbsp;Contains VS Code run and launch configuration&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="420" y="250" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-18" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.folder;" vertex="1" parent="1">
+          <mxGeometry x="220" y="258" width="20" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" target="PEWcLykyAjey3LEXS5MI-20" source="PEWcLykyAjey3LEXS5MI-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="175" y="160" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-20" value=".vscode-profile" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="290" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-21" value="&lt;font color=&quot;#212121&quot;&gt;&amp;nbsp;Ignored commit folder contains vscode profile&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="420" y="290" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-22" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.folder;" vertex="1" parent="1">
+          <mxGeometry x="220" y="298" width="20" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" target="PEWcLykyAjey3LEXS5MI-24" source="PEWcLykyAjey3LEXS5MI-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="175" y="160" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-24" value="deployment" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="330" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-25" value="&lt;font color=&quot;#212121&quot;&gt;&amp;nbsp;Contains all deployment configurations for&amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font color=&quot;#212121&quot;&gt;&amp;nbsp;django application&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="420" y="330" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-26" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.folder;" vertex="1" parent="1">
+          <mxGeometry x="220" y="338" width="20" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" target="PEWcLykyAjey3LEXS5MI-28" source="PEWcLykyAjey3LEXS5MI-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="175" y="160" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-28" value="django_project" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="370" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-29" value="&lt;font color=&quot;#212121&quot;&gt;&amp;nbsp;Contains source code for django application&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="420" y="370" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-30" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.folder;" vertex="1" parent="1">
+          <mxGeometry x="220" y="378" width="20" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" target="PEWcLykyAjey3LEXS5MI-32" source="PEWcLykyAjey3LEXS5MI-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="175" y="160" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-32" value="docs" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="530" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-33" value="&lt;font color=&quot;#212121&quot;&gt;&amp;nbsp;Contains all about documentations&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="420" y="530" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-34" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.folder;" vertex="1" parent="1">
+          <mxGeometry x="220" y="538" width="20" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" target="PEWcLykyAjey3LEXS5MI-39" source="PEWcLykyAjey3LEXS5MI-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="175" y="160" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="PEWcLykyAjey3LEXS5MI-39" target="PEWcLykyAjey3LEXS5MI-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-39" value="playwright" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="570" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-40" value="&lt;font color=&quot;#212121&quot;&gt;&amp;nbsp;Contains playwrights for E2E tests&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="420" y="570" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-41" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.folder;" vertex="1" parent="1">
+          <mxGeometry x="220" y="578" width="20" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-42" value="ci-test" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="610" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-44" value="&lt;font color=&quot;#212121&quot;&gt;&amp;nbsp;This contains playwright test for local or&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font color=&quot;#212121&quot;&gt;&amp;nbsp;github workflow&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="420" y="610" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-45" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.folder;" vertex="1" parent="1">
+          <mxGeometry x="305" y="618" width="15" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" target="PEWcLykyAjey3LEXS5MI-49" source="PEWcLykyAjey3LEXS5MI-39">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="263" y="640" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-49" value="staging-tests" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="650" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-50" value="&lt;font color=&quot;#212121&quot;&gt;&amp;nbsp;Contains playwright tests for staging&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="420" y="650" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-51" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.folder;" vertex="1" parent="1">
+          <mxGeometry x="305" y="658" width="15" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" target="PEWcLykyAjey3LEXS5MI-53" source="PEWcLykyAjey3LEXS5MI-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="258.5" y="392" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-53" value="core" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="412" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-54" value="&lt;font color=&quot;#212121&quot;&gt;&amp;nbsp;Contains all django settings&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="420" y="412" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-55" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.folder;" vertex="1" parent="1">
+          <mxGeometry x="305" y="420" width="15" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" target="PEWcLykyAjey3LEXS5MI-59" source="PEWcLykyAjey3LEXS5MI-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="263" y="434" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-59" value="frontend" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="450" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-60" value="&lt;font color=&quot;#212121&quot;&gt;&amp;nbsp;Focus just for frontend (React, Chakra)&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="420" y="450" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-61" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.folder;" vertex="1" parent="1">
+          <mxGeometry x="305" y="458" width="15" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" target="PEWcLykyAjey3LEXS5MI-64" source="PEWcLykyAjey3LEXS5MI-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="442" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-64" value="app" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="490" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-65" value="&lt;font color=&quot;#212121&quot;&gt;&amp;nbsp;Create new django app as new folder&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="420" y="490" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PEWcLykyAjey3LEXS5MI-66" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.folder;" vertex="1" parent="1">
+          <mxGeometry x="308" y="498" width="15" height="14" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="JNnx6d4dZcJ59UoNaMSG" name="Repo Components">
+    <mxGraphModel dx="2004" dy="1284" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NoPTVcLKuI0e-w13vakI-13" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="100" width="720" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="NoPTVcLKuI0e-w13vakI-1" value="Django Application" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="130" y="160" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NoPTVcLKuI0e-w13vakI-2" value="Django / GeoDjango" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="220" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NoPTVcLKuI0e-w13vakI-3" value="PostgreSQL / PostGIS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="250" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NoPTVcLKuI0e-w13vakI-4" value="Docker" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="280" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NoPTVcLKuI0e-w13vakI-5" value="Celery" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="310" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NoPTVcLKuI0e-w13vakI-6" value="Redis" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="340" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NoPTVcLKuI0e-w13vakI-7" value="Nginx" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="370" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NoPTVcLKuI0e-w13vakI-8" value="Documentations" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="340" y="160" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NoPTVcLKuI0e-w13vakI-9" value="MKDocs" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="220" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NoPTVcLKuI0e-w13vakI-10" value="Playwright" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="550" y="160" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NoPTVcLKuI0e-w13vakI-11" value="Playwright" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="220" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NoPTVcLKuI0e-w13vakI-12" value="React / Chakra" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="400" width="160" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
