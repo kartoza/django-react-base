@@ -89,7 +89,7 @@ if (isServe) {
   conf.output = {
     path: path.resolve(__dirname, "./bundles/frontend"),
     filename: filename + ".js",
-    publicPath: "http://dev.local:9000/static/",
+    publicPath: "http://localhost:9000/static/",
   };
 
   conf.devServer = {

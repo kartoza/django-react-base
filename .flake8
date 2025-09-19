@@ -17,6 +17,7 @@ exclude =
     .git,
     __pycache__,
     .venv,
+    ./venv,
     venv,
     .tox,
     .mypy_cache,
@@ -24,7 +25,8 @@ exclude =
     node_modules,
     build,
     dist,
-    core/settings/utils.py,
+    */core/settings/utils.py,
+    */core/settings/,
     *.egg-info,
     */static/*,
     */media/*
