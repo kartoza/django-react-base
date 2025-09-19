@@ -1,7 +1,7 @@
-mkdocs-with-pdf
-mkdocs-bootswatch
 mkdocs-mermaid2-plugin
 mkdocs-material
+mkdocs-with-pdf
+mkdocs-bootswatch
 mdx_gh_links
 mkdocs-pdf-export-plugin
 mkdocstrings-python

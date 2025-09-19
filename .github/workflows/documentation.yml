@@ -7,6 +7,13 @@ on:
       - "documentation.yml"
       - "docs/**.md"
       - "docs/assets/**"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "documentation.yml"
+      - "docs/**.md"
+      - "docs/assets/**"
 
 jobs:
   publish_docs:
