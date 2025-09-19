@@ -9,6 +9,7 @@
     "sourceMap": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
+    "strict": true,
     "lib": [
       "ES2021.String",
       "dom"
