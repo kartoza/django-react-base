@@ -25,7 +25,8 @@
           "ms-python.python",
           "ms-azuretools.vscode-docker",
           "ms-python.flake8",
-          "njpwerner.autodocstring"
+          "njpwerner.autodocstring",
+          "Orta.vscode-jest"
         ],
         "settings": {
           "terminal.integrated.shell.linux": "/bin/bash",
