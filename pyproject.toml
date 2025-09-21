@@ -35,6 +35,7 @@ select = [
     "C90", # mccabe complexity
     "D",   # pydocstyle (docstrings)
 ]
+extend-select = ["I"]
 
 # Ignore the same rules as flake8 extend-ignore (excluding W503 which doesn't exist in Ruff)
 ignore = [
