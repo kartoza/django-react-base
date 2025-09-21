@@ -55,6 +55,7 @@ def normalize_name_sync_action(
 
 class UserAdmin(DjangoUserAdmin):
     """User admin with normalize-name actions."""
+
     actions = [normalize_name_action, normalize_name_sync_action]
 
 

@@ -9,7 +9,7 @@ from urllib.parse import urlparse
 
 
 class FrontendView(TemplateView):
-    template_name = 'app.html'
+    template_name = "app.html"
 
 
 @method_decorator(csrf_exempt, name="dispatch")
@@ -33,10 +33,7 @@ class SentryProxyView(View):
                 "Content-Type": "application/x-sentry-envelope",
             }
             response = requests.post(
-                sentry_url,
-                headers=headers,
-                data=envelope.encode("utf-8"),
-                timeout=200
+                sentry_url, headers=headers, data=envelope.encode("utf-8"), timeout=200
             )
 
             return HttpResponse(response.content, status=response.status_code)

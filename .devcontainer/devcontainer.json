@@ -24,8 +24,8 @@
         "extensions": [
           "ms-python.python",
           "ms-azuretools.vscode-docker",
-          "ms-python.flake8",
-          "njpwerner.autodocstring"
+          "njpwerner.autodocstring",
+          "charliermarsh.ruff"
         ],
         "settings": {
           "terminal.integrated.shell.linux": "/bin/bash",
