@@ -1,11 +1,12 @@
-from django.views.generic import TemplateView, View
+import json
+from urllib.parse import urlparse
+
+import requests
+from django.conf import settings
 from django.http import HttpResponse
 from django.utils.decorators import method_decorator
-from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
-import json
-import requests
-from urllib.parse import urlparse
+from django.views.generic import TemplateView, View
 
 
 class FrontendView(TemplateView):
