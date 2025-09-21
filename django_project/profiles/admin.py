@@ -5,7 +5,6 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin as DjangoUserAdmin
 from django.db.models import QuerySet
 from django.http import HttpRequest
-
 from profiles.tasks.username import normalize_username
 
 User = get_user_model()

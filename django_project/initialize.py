@@ -9,14 +9,14 @@ This script initializes
 #########################################################
 # Imports
 #########################################################
-from django.db import connection
-from django.db.utils import OperationalError
-from django.contrib.auth import get_user_model
-from django.core.management import call_command
 import os
 import time
 
 import django
+from django.contrib.auth import get_user_model
+from django.core.management import call_command
+from django.db import connection
+from django.db.utils import OperationalError
 
 django.setup()
 
