@@ -7,8 +7,8 @@ interface Props {
 
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo
+  error?: Error | null;
+  errorInfo?: ErrorInfo | null;
 }
 
 export default class ErrorBoundary extends React.Component<Props, State> {
