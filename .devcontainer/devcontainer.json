@@ -25,7 +25,8 @@
           "ms-python.python",
           "ms-azuretools.vscode-docker",
           "njpwerner.autodocstring",
-          "charliermarsh.ruff"
+          "charliermarsh.ruff",
+          "Orta.vscode-jest"
         ],
         "settings": {
           "terminal.integrated.shell.linux": "/bin/bash",

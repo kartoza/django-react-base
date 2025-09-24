@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import maplibregl from "maplibre-gl";
 import { Box } from "@chakra-ui/react";
 
@@ -9,7 +9,7 @@ import "./style.scss";
 
 /** MapLibre component. */
 export default function MapLibre() {
-  const [map, setMap] = useState<maplibregl.Map>(null);
+  const [map, setMap] = useState<maplibregl.Map | null>(null);
 
   /** Initiate */
   useEffect(() => {
