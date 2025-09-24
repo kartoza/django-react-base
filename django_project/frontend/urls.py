@@ -13,13 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.urls import path
 
 from .views import FrontendView, SentryProxyView
 
 urlpatterns = [
-    path('sentry-proxy/',
-         SentryProxyView.as_view(), name='sentry-proxy'),
-    path('', FrontendView.as_view(), name='frontend'),
-    path('<str:text>', FrontendView.as_view(), name='frontend'),
+    path("sentry-proxy/", SentryProxyView.as_view(), name="sentry-proxy"),
+    path("", FrontendView.as_view(), name="frontend"),
+    path("<str:text>", FrontendView.as_view(), name="frontend"),
 ]
