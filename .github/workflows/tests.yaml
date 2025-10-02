@@ -8,30 +8,22 @@ on:
     branches: [ main, version-2.0.0, Filter-improvement ]
 
 jobs:
-  flake:
+  lint:
     name: 🔧 Python Lint
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.8.18
-          architecture: x64
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Display branch
         run: git branch --show-current
 
-      - name: Install flake8
-        run: pip install flake8 flake8-docstrings pydoclint[flake8]
-
-      - name: Run flake8
-        run: flake8 --config=.flake8
+      - name: Run ruff
+        uses: astral-sh/ruff-action@v3
 
   build_image:
-    needs: flake
+    needs: lint
     name: Build Docker Image
     runs-on: ubuntu-latest
     env:

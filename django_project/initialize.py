@@ -9,21 +9,21 @@ This script initializes
 #########################################################
 # Imports
 #########################################################
-from django.db import connection
-from django.db.utils import OperationalError
-from django.contrib.auth import get_user_model
-from django.core.management import call_command
 import os
 import time
 
 import django
+from django.contrib.auth import get_user_model
+from django.core.management import call_command
+from django.db import connection
+from django.db.utils import OperationalError
 
 django.setup()
 
 # Getting the secrets
-admin_username = os.getenv('ADMIN_USERNAME')
-admin_password = os.getenv('ADMIN_PASSWORD')
-admin_email = os.getenv('ADMIN_EMAIL')
+admin_username = os.getenv("ADMIN_USERNAME")
+admin_password = os.getenv("ADMIN_PASSWORD")
+admin_email = os.getenv("ADMIN_EMAIL")
 
 #########################################################
 # 1. Waiting for PostgreSQL
@@ -47,8 +47,8 @@ connection.close()
 
 print("-----------------------------------------------------")
 print("2. Running the migrations")
-call_command('makemigrations')
-call_command('migrate', '--noinput')
+call_command("makemigrations")
+call_command("migrate", "--noinput")
 
 #########################################################
 # 3. Creating superuser if it doesn't exist
@@ -62,14 +62,12 @@ try:
     superuser.is_active = True
     superuser.email = admin_email
     superuser.save()
-    print('superuser successfully updated')
+    print("superuser successfully updated")
 except get_user_model().DoesNotExist:
     superuser = get_user_model().objects.create_superuser(
-        admin_username,
-        admin_email,
-        admin_password
+        admin_username, admin_email, admin_password
     )
-    print('superuser successfully created')
+    print("superuser successfully created")
 
 #########################################################
 # 4. Collecting static files
@@ -77,4 +75,4 @@ except get_user_model().DoesNotExist:
 
 print("-----------------------------------------------------")
 print("4. Collecting static files")
-call_command('collectstatic', '--noinput', verbosity=0)
+call_command("collectstatic", "--noinput", verbosity=0)

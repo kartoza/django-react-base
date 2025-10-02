@@ -6,8 +6,7 @@ User = get_user_model()
 
 @shared_task(bind=True, autoretry_for=(User.DoesNotExist,), retry_backoff=True, max_retries=1)
 def normalize_username(self, user_id: int) -> dict:
-    """Normalize a user's first and last name.
-    """
+    """Normalize a user's first and last name."""
     user = User.objects.get(pk=user_id)
 
     new_first = (user.first_name or "").strip().title()

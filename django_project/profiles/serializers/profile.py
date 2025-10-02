@@ -11,5 +11,6 @@ class ProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         """Configuration for ProfileSerializer."""
+
         model = User
         fields = ("id", "username", "first_name", "last_name", "email")

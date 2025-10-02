@@ -1,15 +1,16 @@
-from django.views.generic import TemplateView, View
+import json
+from urllib.parse import urlparse
+
+import requests
+from django.conf import settings
 from django.http import HttpResponse
 from django.utils.decorators import method_decorator
-from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
-import json
-import requests
-from urllib.parse import urlparse
+from django.views.generic import TemplateView, View
 
 
 class FrontendView(TemplateView):
-    template_name = 'app.html'
+    template_name = "app.html"
 
 
 @method_decorator(csrf_exempt, name="dispatch")
@@ -33,10 +34,7 @@ class SentryProxyView(View):
                 "Content-Type": "application/x-sentry-envelope",
             }
             response = requests.post(
-                sentry_url,
-                headers=headers,
-                data=envelope.encode("utf-8"),
-                timeout=200
+                sentry_url, headers=headers, data=envelope.encode("utf-8"), timeout=200
             )
 
             return HttpResponse(response.content, status=response.status_code)
