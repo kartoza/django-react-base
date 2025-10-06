@@ -10,7 +10,7 @@ function Navbar() {
     throw new Error('error!')
   }
   return (
-    <Box as="header" bg="primary.main" px={4} py={2} shadow="md">
+    <Box as="header" bg="primary.500" px={4} py={2} shadow="md">
       <Box>
         <Heading size="md">
           <Link to="/">Kartoza Django React Base</Link>
