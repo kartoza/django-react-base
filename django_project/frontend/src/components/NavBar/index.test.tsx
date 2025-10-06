@@ -35,7 +35,7 @@ describe('Navbar Component', () => {
       // Check if main header element exists
       const header = screen.getByRole('banner');
       expect(header).toBeInTheDocument();
-      expect(header).toHaveStyle({ background: 'var(--chakra-colors-primary-main)' });
+      expect(header).toHaveStyle({ background: 'var(--chakra-colors-primary-500)' });
     });
 
     test('renders heading with correct text and link', () => {
