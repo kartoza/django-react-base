@@ -65,6 +65,7 @@ nav:
       - developer/index.md
       - Django Application:
           - Overview: developer/django/architecture-overview.md
+          - Coding Standard: developer/django/coding_standard.md
           - Getting Started:
               - "Before you start": developer/django/setup/index.md
               - "Windows 11 Pro": developer/django/setup/setup-win/index.md
