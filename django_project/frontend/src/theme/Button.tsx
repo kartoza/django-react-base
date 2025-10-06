@@ -4,19 +4,19 @@ export const buttonRecipe = defineRecipe({
   variants: {
     variant: {
       primary: {
-        bg: "primary.main",
+        bg: "primary.500",
         color: "white",
-        _hover: { bg: "secondary.main" }
+        _hover: { bg: "secondary.500" }
       },
       "primary.outline": {
         bg: "white",
-        color: "primary.main",
+        color: "primary.500",
         border: "1px solid",
-        borderColor: "primary.main",
+        borderColor: "primary.500",
         _hover: {
-          bg: "secondary.main",
+          bg: "secondary.500",
           color: "white",
-          borderColor: "secondary.main",
+          borderColor: "secondary.500",
         }
       },
     },
