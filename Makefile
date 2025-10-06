@@ -8,7 +8,7 @@ OVERRIDE_TEMPLATE_PATH := deployment/docker-compose.override.template.yml
 ENV_PATH := deployment/.env
 ENV_TEMPLATE_PATH := deployment/.template.env
 
-.PHONY: build up dev down flake wait-db frontend-test dev-ci-test dev-entrypoint dev-initialize dev-runserver dev-test sleep ensure-dev-files
+.PHONY: build up dev down flake wait-db frontend-test dev-ci-test dev-entrypoint dev-initialize dev-runserver dev-test sleep setup
 
 build:
 	@echo
@@ -17,14 +17,14 @@ build:
 	@echo "------------------------------------------------------------------"
 	@docker compose build
 
-up: ensure-dev-files
+up: setup
 	@echo
 	@echo "------------------------------------------------------------------"
 	@echo "Running in production mode"
 	@echo "------------------------------------------------------------------"
 	@docker compose $(ARGS) up -d nginx django
 
-dev: ensure-dev-files
+dev: setup
 	@echo
 	@echo "------------------------------------------------------------------"
 	@echo "Running in dev mode"
@@ -55,7 +55,7 @@ frontend-test:
 # -----------------------------------------------------------------------------
 # ----------------------------------- D E V -----------------------------------
 # -----------------------------------------------------------------------------
-dev-ci-test: ensure-dev-files
+dev-ci-test: setup
 	@echo
 	@echo "------------------------------------------------------------------"
 	@echo "Running in DEVELOPMENT mode for CI test"
@@ -100,30 +100,16 @@ sleep:
 # -----------------------------------------------------------------------------
 # ---------------------------- P R E - F L I G H T -----------------------------
 # -----------------------------------------------------------------------------
-ensure-dev-files:
+setup:
+	@echo
+	@echo "------------------------------------------------------------------"
+	@echo "Do setup.sh"
+	@echo "------------------------------------------------------------------"
+	@./setup.sh
+
+vscode: setup
 	@echo
 	@echo "------------------------------------------------------------------"
 	@echo "Pre-flight: ensuring dev override and env files exist"
 	@echo "------------------------------------------------------------------"
-	@# Ensure deployment/docker-compose.override.yml
-	@if [ ! -f "$(OVERRIDE_PATH)" ]; then \
-		if [ -f "$(OVERRIDE_TEMPLATE_PATH)" ]; then \
-			cp "$(OVERRIDE_TEMPLATE_PATH)" "$(OVERRIDE_PATH)"; \
-			echo "Created $(OVERRIDE_PATH) from $(OVERRIDE_TEMPLATE_PATH)."; \
-		else \
-			echo "$(OVERRIDE_PATH) not found AND no template at $(OVERRIDE_TEMPLATE_PATH)."; \
-		fi; \
-	else \
-		echo "$(OVERRIDE_PATH) already exists; leaving it untouched."; \
-	fi
-	@# Ensure .env from .template.env
-	@if [ ! -f "$(ENV_PATH)" ]; then \
-		if [ -f "$(ENV_TEMPLATE_PATH)" ]; then \
-			cp "$(ENV_TEMPLATE_PATH)" "$(ENV_PATH)"; \
-			echo "Created .env from .template.env."; \
-		else \
-			echo ".env not found AND no .template.env present."; \
-		fi; \
-	else \
-		echo ".env already exists; leaving it untouched."; \
-	fi
+	@./vscode.sh

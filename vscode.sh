@@ -9,28 +9,21 @@ EXT_DIR=".vscode-profile/extensions"
 VSCODE_DIR=".vscode-profile"
 LOG_FILE=".vscode-profile/.log"
 
-REQUIRED_EXTENSIONS=(
-    aikebang.mkdocs-syntax-highlight@0.2.1
-    ms-python.python@2025.6.1
-    JorgeBertocchini.mkdocs-alias-navigator@0.0.2
-    timonwong.shellcheck@0.37.7
-    ms-python.black-formatter@2025.2.0
-    ms-python.pylint@2025.2.0
-    ms-vscode-remote.remote-containers@0.413.0
-    naumovs.color-highlight@2.8.0
-    waderyan.gitblame@11.1.3
-    ms-python.debugpy@2025.8.0
-    ms-python.vscode-pylance@2025.5.1
-    rpinski.shebang-snippets@1.1.0
-    joffreykern.markdown-toc@1.4.0
+CODING_EXTENSIONS=(
+    ms-vscode-remote.remote-containers@0.429.0
+    charliermarsh.ruff@2025.26.0
+)
+
+DOCUMENTATION_EXTENSIONS=(
     bpruitt-goddard.mermaid-markdown-syntax-highlighting@1.7.1
-    DavidAnson.vscode-markdownlint@0.60.0
-    shd101wyy.markdown-preview-enhanced@0.8.18
-    MermaidChart.vscode-mermaid-chart@2.3.0
-    foxundermoon.shell-format@7.2.5
-    yzhang.markdown-all-in-one@3.6.3
-    mkhl.direnv@0.17.0
     bierner.markdown-mermaid@1.28.0
+    DavidAnson.vscode-markdownlint@0.60.0
+    yzhang.markdown-all-in-one@3.6.3
+)
+
+REQUIRED_EXTENSIONS=(
+    "${CODING_EXTENSIONS[@]}"
+    "${DOCUMENTATION_EXTENSIONS[@]}"
 )
 
 # ----------------------------------------------
@@ -235,7 +228,7 @@ fi
 # Python formatter and linter
 echo "🗨️ Ensuring Python formatter and linter are set..."
 if ! jq -e '."[python]".editor.defaultFormatter' "$SETTINGS_FILE" >/dev/null; then
-    jq '."[python]" += {"editor.defaultFormatter": "ms-python.black-formatter"}' "$SETTINGS_FILE" >"$SETTINGS_FILE.tmp" && mv "$SETTINGS_FILE.tmp" "$SETTINGS_FILE"
+    jq '."[python]" += {"editor.defaultFormatter": "charliermarsh.ruff"}' "$SETTINGS_FILE" >"$SETTINGS_FILE.tmp" && mv "$SETTINGS_FILE.tmp" "$SETTINGS_FILE"
     echo "  🔧 Python formatter set to Black"
 else
     echo "  ✅ Python formatter already configured"
