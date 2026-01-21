@@ -25,7 +25,10 @@ let conf = {
             {
                 test: /\.tsx?$/,
                 exclude: /node_modules/,
-                use: [{ loader: 'ts-loader' }],
+                use: {
+                    loader: 'ts-loader',
+                    options: { configFile: 'tsconfig.app.json' }
+                }
             },
             {
                 test: /\.s[ac]ss$/i,

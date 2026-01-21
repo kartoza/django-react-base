@@ -16,7 +16,10 @@ RUN pip3 install --upgrade pip && pip install --upgrade pip
 ARG CPUCOUNT=1
 RUN pip3 install -r /requirements.txt
 
-RUN apt-get update -y && apt-get install -y nodejs npm
+RUN apt-get update -y && apt-get install -y curl ca-certificates gnupg \
+ && curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
+ && apt-get install -y nodejs \
+ && node -v && npm -v
 
 ADD django_project /home/web/django_project
 
